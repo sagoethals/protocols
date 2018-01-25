@@ -28,9 +28,10 @@ if model:
     #amp = RCCell(500*MOhm, 20*ms/(500*MOhm), dt)
     from brian2 import *
     #defaultclock.dt = 0.01*ms
-    eqs = 'dV/dt = (500*Mohm*I-V)/(20*ms) : volt'
+    #eqs = 'dV/dt = (500*Mohm*I-V)/(20*ms) : volt'
     dt = 0.1*ms
-    amp = BrianExperiment(eqs, namespace = {}, dt=dt)
+    #amp = BrianExperiment(eqs, namespace = {}, dt=dt)
+    amp = AxonalInitiationModel()
 #else:
 #    board = NI()
 #    board.sampling_rate = float(1/dt)
@@ -48,7 +49,7 @@ if model:
 ntrials = 20
 V = []
 Ic = zeros(int(200 * ms / dt))*nA
-for ampli in 0.1*linspace(-1,1,ntrials)*nA:
+for ampli in 0.5*linspace(-1,1,ntrials)*nA:
     Ic[int(10 * ms / dt):int(70 * ms / dt)] = ampli
     V.append(amp.acquire('V', I=Ic))
 

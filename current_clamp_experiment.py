@@ -1,14 +1,9 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jan 22 17:44:38 2018
+Created on Thu Jan 25 17:15:30 2018
 
 @author: sarah
-
-First experiment: we switch between
-- peak axonal current measurements
-- threshold measurements
-
 """
 
 import sys
@@ -64,37 +59,9 @@ for rec in range(nrec):
     rec = str(rec).zfill(2)
     cell = str(cell).zfill(2)
     sleep(1)
-    print 'Starting test pulse protocol'
-    tp = test_pulse(amp)
-    savez(date + cell + '01' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
+    print 'Starting current-clamp protocol'
+    cc = current_clamp(amp)
+    savez(date + cell + 'cc' + rec, Ic=tp[0], V=tp[1][0], time=tp[2] )
     sleep(1)
-    print 'Starting VC activation protocol'
-    vc_act = voltage_clamp_acti(amp)
-    savez(date + cell + '02' + rec, Vc=vc_act[0], I=vc_act[1][0], time=vc_act[2])
-    sleep(1)
-#    print 'Starting VC deactivation protocol'
-#    vc_deact = voltage_clamp_deacti(amp)
-#    savez(date + cell + '03' + rec, Vc=vc_deact[0], I=vc_deact[1][0], time=vc_deact[2])
-#    sleep(1)
-#    print 'Starting VC deactivation protocol'
-#    vc_ada = voltage_clamp_threshold_adapt(amp)
-#    savez(date + cell + '04' + rec, Vc=vc_ada[0], I=vc_ada[1][0], time=vc_ada[2])
-#    sleep(1)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     

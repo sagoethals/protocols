@@ -25,36 +25,42 @@ dt = 0.1 * ms
 def test_pulse(amp):
     Vc = zeros(int(100 * ms / dt))*volt
     I = []
-    Vc[:int(20 * ms / dt)] = -60 * mV
-    Vc[int(20 * ms / dt):int(30 * ms / dt)] = -70 * mV
-    Vc[int(30 * ms / dt):int(40 * ms / dt)] = -50 * mV
-    Vc[int(40 * ms / dt):] = -60 * mV
+    Vc[:int(20 * ms / dt)] = -70 * mV
+    Vc[int(20 * ms / dt):int(30 * ms / dt)] = -80 * mV
+    Vc[int(30 * ms / dt):int(40 * ms / dt)] = -60 * mV
+    Vc[int(40 * ms / dt):] = -70 * mV
     I.append(amp.acquire('I', V=Vc))
     t = dt*arange(len(Vc))
     
     #savetxt(date + '_tp.txt',array(Vc)/mV)
-    figure('tp')
+    figure('Test pulses')
     for Ii in I:
+        subplot(211)
         plot(t/ms, array(Ii) / pamp)
+        subplot(212)
+        plot(t/ms, Vc/mV)
         
-    return Vc/mV, I/pamp
+    return Vc/mV, I/pamp, t/ms
 
-def voltage_clamp_acti(amp, ntrials=30):
+def voltage_clamp_acti(amp):
+    ntrials=31
     Vc = zeros(int(100 * ms / dt))*volt
     I = []
     for ampli in linspace(-100,20,ntrials)*mV:
+        print ampli
         Vc[int(10 * ms / dt):int(70 * ms / dt)] = ampli
         I.append(amp.acquire('I', V=Vc))
     t = dt*arange(len(Vc))
 
     #savetxt('data_vc_inc.txt',array(Vc)/mV)
-    figure('vc')
+    figure('VC - Activation')
     for Ii in I:
         plot(t/ms, array(Ii) / pamp)
         
-    return Vc/mV, I/pamp
+    return Vc/mV, I/pamp, t/ms
 
-def voltage_clamp_deacti(amp, ntrials = 30):
+def voltage_clamp_deacti(amp):
+    ntrials = 31
     Vc = zeros(int(100 * ms / dt))*volt
     I = []
     for ampli in linspace(20,-100,ntrials)*mV:
@@ -65,12 +71,15 @@ def voltage_clamp_deacti(amp, ntrials = 30):
     t = dt*arange(len(Vc))
 
     #savetxt('data_vc_dec.txt',array(Vc)/mV)
+    figure('VC - Deactivation')
     for Ii in I:
-        plot(t/ms, array(Ii) / mV)
+        plot(t/ms, array(Ii) / pamp)
     
-    return Vc, I
+    return Vc/mV, I/pamp, t/ms
 
-def voltage_clamp_threshold_adapt(amp, nstarts = 10, ntrials = 20):
+def voltage_clamp_threshold_adapt(amp):
+    nstarts = 11
+    ntrials = 21
     T = 100 * ms
     I = []
     for V0 in linspace(-80,-60,nstarts)*mV:
@@ -85,27 +94,29 @@ def voltage_clamp_threshold_adapt(amp, nstarts = 10, ntrials = 20):
 
     #savetxt('data_vc_dec.txt',array(Vc)/mV)
     
+    figure('VC - threshold adaptation')
     for Ii in I:
-        plot(t/ms, array(Ii) / mV)
+        plot(t/ms, array(Ii) / pamp)
 
-    return Vc, I
+    return Vc/mV, I/pamp, t/ms
 
 def current_clamp(amp):
-    ntrials = 20
+    ntrials = 21
     V = []
     Ic = zeros(int(200 * ms / dt))*nA
-    for ampli in 0.1*linspace(-1,1,ntrials)*nA:
+    for ampli in 0.5*linspace(-1,1,ntrials)*nA:
         Ic[int(10 * ms / dt):int(70 * ms / dt)] = ampli
         V.append(amp.acquire('V', I=Ic))
 
     t = dt*arange(len(Ic))
 
     #savetxt('data.txt',array(V)/mV)
-
+    
+    figure('Current clamp')
     for Vi in V:
         plot(t/ms, array(Vi) / mV)
 
-    return Ic, V
+    return Ic/pamp, V/mV, t/ms
 
 
 
