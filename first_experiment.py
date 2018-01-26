@@ -56,13 +56,17 @@ else:
     Rs = amp.auto_bridge_balance()
     print "Bridge resistance:",Rs / 1e6
 
-cell = 1
+cell = 2
 nrec = 1
 
 for rec in range(nrec):
     close('all')
     rec = str(rec).zfill(2)
     cell = str(cell).zfill(2)
+    sleep(1)
+    print 'Current pulse'
+    cp = current_pulse(amp)
+    savez(date + cell + '00' + rec, Ic=cp[0], V=cp[1][0], time=cp[2] )
     sleep(1)
     print 'Starting test pulse protocol'
     tp = test_pulse(amp)
@@ -72,14 +76,14 @@ for rec in range(nrec):
     vc_act = voltage_clamp_acti(amp)
     savez(date + cell + '02' + rec, Vc=vc_act[0], I=vc_act[1][0], time=vc_act[2])
     sleep(1)
-#    print 'Starting VC deactivation protocol'
-#    vc_deact = voltage_clamp_deacti(amp)
-#    savez(date + cell + '03' + rec, Vc=vc_deact[0], I=vc_deact[1][0], time=vc_deact[2])
-#    sleep(1)
-#    print 'Starting VC deactivation protocol'
-#    vc_ada = voltage_clamp_threshold_adapt(amp)
-#    savez(date + cell + '04' + rec, Vc=vc_ada[0], I=vc_ada[1][0], time=vc_ada[2])
-#    sleep(1)
+    print 'Starting VC deactivation protocol'
+    vc_deact = voltage_clamp_deacti(amp)
+    savez(date + cell + '03' + rec, Vc=vc_deact[0], I=vc_deact[1][0], time=vc_deact[2])
+    sleep(1)
+    print 'Starting threshold adaptation protocol'
+    vc_ada = voltage_clamp_threshold_adapt(amp)
+    savez(date + cell + '04' + rec, Vc=vc_ada[0], I=vc_ada[1][0], time=vc_ada[2])
+    sleep(1)
     
     
     
