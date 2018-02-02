@@ -37,79 +37,83 @@ def test_pulse(amp):
         plot(t/ms, array(Ii) / pamp)
         subplot(212)
         plot(t/ms, Vc/mV)
+        pause(0.05)
         
     return Vc/mV, I/pamp, t/ms
 
 def voltage_clamp_acti(amp):
     ntrials=31
     Vc = -0.07*ones(int(60 * ms / dt))*volt
+    t = dt*arange(len(Vc))
     I = []
     Vcs = []
+    figure('VC - Activation')
     for ampli in linspace(-100,20,ntrials)*mV:
-        sleep(1)
+        sleep(1) # 1 second between each voltage step
         print ampli
         Vc[int(20 * ms / dt):int(40 * ms / dt)] = ampli
-        I.append(amp.acquire('I', V=Vc))
+        #I.append(amp.acquire('I', V=Vc))
+        Ii = amp.acquire('I', V=Vc)
+        I.append(Ii)
         Vcs.append(array(Vc))
-    t = dt*arange(len(Vc))
-
-    figure('VC - Activation')
-    for Ii in I:
+        
         subplot(211)
         plot(t/ms, array(Ii) / pamp)
-    for Vci in Vcs:
         subplot(212)
-        plot(t/ms, array(Vci) / mV)
+        plot(t/ms, array(Vc) / mV)
+        pause(0.05)
         
     return Vcs/mV, I/pamp, t/ms
 
 def voltage_clamp_deacti(amp):
     ntrials = 31
     Vc = -0.07*ones(int(65 * ms / dt))*volt
+    t = dt*arange(len(Vc))
     I = []
     Vcs = []
+    figure('VC - Deactivation')
     for ampli in linspace(20,-100,ntrials)*mV:
-        print ampli
         sleep(1)
+        print ampli
         Vc[int(20 * ms / dt):int(25 * ms / dt)] = 20 * mV
         Vc[int(25 * ms / dt):int(45 * ms / dt)] = ampli
-        I.append(amp.acquire('I', V=Vc))
+        #I.append(amp.acquire('I', V=Vc))
+        #Vcs.append(array(Vc))
+        Ii = amp.acquire('I', V=Vc)
+        I.append(Ii)
         Vcs.append(array(Vc))
-    t = dt*arange(len(Vc))
-
-    figure('VC - Deactivation')
-    for Ii in I:
+        
         subplot(211)
         plot(t/ms, array(Ii) / pamp)
-    for Vci in Vcs:
         subplot(212)
-        plot(t/ms, array(Vci) / mV)
+        plot(t/ms, array(Vc) / mV)
+        pause(0.05)
         
     return Vcs/mV, I/pamp, t/ms
 
 def voltage_clamp_threshold_adapt(amp):
-    nstarts = 11
+    nstarts = 6
     ntrials = 21
     T = 60 * ms
     I = []
     Vcs = []
     for V0 in linspace(-80,-60,nstarts)*mV:
         Vc = V0 * ones(int(T / dt))
+        t = dt*arange(len(Vc))
+        figure('Threshold adaptation V0=%s' %V0)
         for ampli in linspace(-80,-40,ntrials)*mV:
             print V0, ampli
             sleep(1)
             Vc[int(20 * ms / dt):int(40 * ms / dt)] = ampli
-            I.append(amp.acquire('I', V=Vc))
+            Ii = amp.acquire('I', V=Vc)
+            I.append(Ii)
             Vcs.append(array(Vc))
-    t = dt*arange(len(Vc))
-    
-    figure('VC - threshold adaptation')
-    for Ii in I:
-        subplot(211)
-        plot(t/ms, array(Ii) / pamp)
-    for Vci in Vcs:
-        subplot(212)
-        plot(t/ms, array(Vci) / mV)
+        
+            subplot(211)
+            plot(t/ms, array(Ii) / pamp)
+            subplot(212)
+            plot(t/ms, array(Vc) / mV)
+            pause(0.05)
 
     return Vcs/mV, I/pamp, t/ms
 
@@ -118,44 +122,45 @@ def current_clamp(amp):
     V = []
     Ics = []
     Ic = zeros(int(45 * ms / dt))*nA
-    for ampli in 0.5*linspace(-1,1,ntrials)*nA:
+    t = dt*arange(len(Ic))
+    figure('Current clamp')
+    for ampli in 0.3*linspace(-1,1,ntrials)*nA:
         print ampli
         sleep(1)
         Ic[int(20 * ms / dt):int(25 * ms / dt)] = ampli
-        V.append(amp.acquire('V', I=Ic))
+        Vi = amp.acquire('V', I=Ic)
+        V.append(Vi)
         Ics.append(array(Ic))
 
-    t = dt*arange(len(Ic))
-
-    figure('Current clamp')
-    for Vi in V:
         subplot(211)
         plot(t/ms, array(Vi) / mV)
-    for Ici in Ics:
         subplot(212)
-        plot(t/ms, Ici / pamp)
+        plot(t/ms, Ic / pamp)
+        pause(0.05)
 
     return Ics/pamp, V/mV, t/ms
 
 def current_pulse(amp):
     ntrials = 5
     V = []
+    Ics = []
     Ic = zeros(int(45 * ms / dt))*nA
+    t = dt*arange(len(Ic))
+    figure('Current pulse')
     for i in range(ntrials):
         sleep(1)
         Ic[int(20 * ms / dt):int(25 * ms / dt)] = 0.2*nA
-        V.append(amp.acquire('V', I=Ic))
+        Vi = amp.acquire('V', I=Ic)
+        V.append(Vi)
+        Ics.append(array(Ic))
 
-    t = dt*arange(len(Ic))
-
-    figure('Current clamp')
-    for Vi in V:
         subplot(211)
         plot(t/ms, array(Vi) / mV)
         subplot(212)
-    plot(t/ms, Ic / pamp)
+        plot(t/ms, Ic / pamp)
+        pause(0.05)
 
-    return Ic/pamp, V/mV, t/ms
+    return Ics/pamp, V/mV, t/ms
 
 
 
