@@ -41,14 +41,20 @@ def test_pulse(amp):
         
     return Vc/mV, I/pamp, t/ms
 
-def voltage_clamp_acti(amp):
+def voltage_clamp_acti(amp, model = False):
     ntrials=31
     Vc = -0.07*ones(int(60 * ms / dt))*volt
     t = dt*arange(len(Vc))
     I = []
     Vcs = []
+    
+    if model == False:
+        amplis = linspace(-80,40,ntrials)*mV
+    else:
+        amplis = linspace(-80,-50,ntrials)*mV
+                         
     figure('VC - Activation')
-    for ampli in linspace(-100,20,ntrials)*mV:
+    for ampli in amplis:
         sleep(1) # 1 second between each voltage step
         print ampli
         Vc[int(20 * ms / dt):int(40 * ms / dt)] = ampli
@@ -140,8 +146,8 @@ def current_clamp(amp):
 
     return Ics/pamp, V/mV, t/ms
 
-def current_pulse(amp):
-    ntrials = 5
+def current_pulse(amp, ntrials = 5, color = 'k'):
+    #ntrials = 5
     V = []
     Ics = []
     Ic = zeros(int(45 * ms / dt))*nA
@@ -149,15 +155,15 @@ def current_pulse(amp):
     figure('Current pulse')
     for i in range(ntrials):
         sleep(1)
-        Ic[int(20 * ms / dt):int(25 * ms / dt)] = 0.2*nA
+        Ic[int(20 * ms / dt):int(25 * ms / dt)] = 0.3*nA
         Vi = amp.acquire('V', I=Ic)
         V.append(Vi)
         Ics.append(array(Ic))
 
         subplot(211)
-        plot(t/ms, array(Vi) / mV)
+        plot(t/ms, array(Vi) / mV, color = color)
         subplot(212)
-        plot(t/ms, Ic / pamp)
+        plot(t/ms, Ic / pamp, color = color)
         pause(0.05)
 
     return Ics/pamp, V/mV, t/ms
