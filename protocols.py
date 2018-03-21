@@ -115,7 +115,7 @@ def voltage_clamp_threshold_adapt(amp):
             plot(t/ms, array(Vc) / mV)
             pause(0.05)
 
-    return Vcs/mV, I/pA, t/ms
+    return Vcs, I, t/ms
 
 def current_clamp(amp):
     ntrials = 21
