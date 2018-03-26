@@ -43,7 +43,8 @@ def test_pulse(amp):
 
 def voltage_clamp_acti(amp, model = False):
     ntrials=31
-    Vc = -0.07*ones(int(60 * ms / dt))*volt
+    Vc = -0.05*ones(int(60 * ms / dt))*volt
+    #Vc = zeros(int(60 * ms / dt)) * volt
     t = dt*arange(len(Vc))
     I = []
     Vcs = []
@@ -51,7 +52,7 @@ def voltage_clamp_acti(amp, model = False):
     if model == False:
         amplis = linspace(-80,40,ntrials)*mV
     else:
-        amplis = linspace(-80,-50,ntrials)*mV
+        amplis = linspace(-80,-20,ntrials)*mV
                          
     figure('VC - Activation')
     for ampli in amplis:
@@ -163,7 +164,7 @@ def current_pulse(amp, ntrials = 5, color = 'k'):
         subplot(211)
         plot(t/ms, array(Vi) / mV, color = color)
         subplot(212)
-        plot(t/ms, Ic / pamp, color = color)
+        plot(t/ms, Ic / pA, color = color)
         plot(t/ms, Ic / pA)
         pause(0.05)
 

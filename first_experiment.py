@@ -56,55 +56,25 @@ else:
     Rs = amp.auto_bridge_balance()
     print "Bridge resistance:",Rs / 1e6
 
-<<<<<<< HEAD
-cell = 2
-nrec = 1
-=======
 cell = 1
+nrec = 1
 #nrec = linspace(3,6,4)
 
-curr_pulse = False
-curr_clamp = False
+curr_pulse = True
+curr_clamp = True
 t_pulse = True
 vc_act = True
 vc_deact = True
-thres_adapt = True
->>>>>>> 0bb35d0ab98878a71fe8f3913d94d52888052192
+thres_adapt = False
 
 ion()
 
-for rec in range(6,8):
-    close('all')
+for rec in range(4,5):
+
     rec = str(rec).zfill(2)
     cell = str(cell).zfill(2)
-<<<<<<< HEAD
     sleep(1)
-    #print 'Current pulse'
-    #cp = current_pulse(amp)
-    #savez(date + cell + '00' + rec, Ic=cp[0], V=cp[1][0], time=cp[2] )
-    #sleep(1)
-#    print 'Starting current clamp protocol'
-#    cc = current_clamp(amp)
-#    savez(date + cell + '05' + rec, Ic=cc[0], V=cc[1][0], time=cc[2] )
-#    sleep(1)
-    #print 'Starting test pulse protocol'
-    #tp = test_pulse(amp)
-    #savez(date + cell + '01' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
-    #sleep(1)
-    print 'Starting VC activation protocol'
-    vc_act = voltage_clamp_acti(amp)
-    savez(date + cell + '02' + rec, Vc=vc_act[0], I=vc_act[1][0], time=vc_act[2])
-    sleep(1)
-    #print 'Starting VC deactivation protocol'
-    #vc_deact = voltage_clamp_deacti(amp)
-    #savez(date + cell + '03' + rec, Vc=vc_deact[0], I=vc_deact[1][0], time=vc_deact[2])
-    #sleep(1)
-#    print 'Starting threshold adaptation protocol'
-#    vc_ada = voltage_clamp_threshold_adapt(amp)
-#    savez(date + cell + '04' + rec, Vc=vc_ada[0], I=vc_ada[1][0], time=vc_ada[2])
-#    sleep(1)
-#    
-=======
+
     if curr_pulse is True:
         sleep(1)
         print 'Current pulse'
@@ -138,7 +108,6 @@ for rec in range(6,8):
         sleep(1)
     show(block=True)
 
->>>>>>> 0bb35d0ab98878a71fe8f3913d94d52888052192
     
     
     

@@ -3,18 +3,18 @@
 Seal-test to monitor the different steps in a patch experiment.
 """
 import sys
-sys.path.append("/home/sarah/Documents/repositories/clamper/")
+sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 
 from devices import *
 from pylab import *
-from brianmodels import *
+#from brianmodels import *
 
 from datetime import datetime
 from time import sleep
 
 date = datetime.now().strftime("%Y%m%d")
 
-model = True
+model = False
 
 if model:
     from brian2 import *
@@ -52,14 +52,15 @@ ion()
 fig = figure('1')
 
 while fignum_exists('1'):
+    fig.clear()
     sleep(1)
-    Vc = zeros(int(100 * ms / dt))*volt
+    Vc = -0.07*ones(int(100 * ms / dt))*volt
     I = []
-    Vc[int(40 * ms / dt):int(60 * ms / dt)] = 10 * mV
+    Vc[int(30 * ms / dt):int(70 * ms / dt)] = -10 * mV
     I.append(amp.acquire('I', V=Vc))
     t = dt*arange(len(Vc))
     
-    ylim(-100,100)
+    #ylim(-100,100)
     for Ii in I:
         plot(t/ms, array(Ii) / pA)
         pause(0.05)
