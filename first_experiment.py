@@ -1,9 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jan 22 17:44:38 2018
-
-@author: sarah
 
 First experiment: we switch between
 - peak axonal current measurements
@@ -12,11 +9,12 @@ First experiment: we switch between
 """
 
 import sys
-sys.path.append("/Users/Romain/PycharmProjects/clamper/")
+#sys.path.append("/Users/Romain/PycharmProjects/clamper/")
+sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 
-from devices import *
+#from devices import *
 from pylab import *
-#from brianmodels import *
+from brianmodels import *
 from protocols import *
 
 from datetime import datetime
@@ -24,7 +22,7 @@ from time import sleep
 
 date = datetime.now().strftime("%Y%m%d")
 
-model = False
+model = True
 
 if model:
     from brian2 import *
@@ -60,11 +58,11 @@ cell = 1
 nrec = 1
 #nrec = linspace(3,6,4)
 
-curr_pulse = True
-curr_clamp = True
-t_pulse = True
+curr_pulse = False
+#curr_clamp = False
+t_pulse = False #True
 vc_act = True
-vc_deact = True
+vc_deact = False
 thres_adapt = False
 
 ion()
@@ -80,21 +78,21 @@ for rec in range(4,5):
         print 'Current pulse'
         cp = current_pulse(amp)
         savez(date + cell + '00' + rec, Ic=cp[0], V=cp[1][0], time=cp[2] )
-    if curr_clamp is True:
-        sleep(1)
-        print 'Starting current clamp protocol'
-        cc = current_clamp(amp)
-        savez(date + cell + '05' + rec, Ic=cc[0], V=cc[1][0], time=cc[2] )
+#    if curr_clamp is True:
+#        sleep(1)
+#        print 'Starting current clamp protocol'
+#        cc = current_clamp(amp)
+#        savez(date + cell + '05' + rec, Ic=cc[0], V=cc[1][0], time=cc[2] )
     if t_pulse is True:
         sleep(1)
         print 'Starting test pulse protocol'
         tp = test_pulse(amp)
-        savez(date + cell + '01' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
+        #savez(date + cell + '01' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
     if vc_act is True:
         sleep(1)
         print 'Starting VC activation protocol'
-        vc_act = voltage_clamp_acti(amp)
-        savez(date + cell + '02' + rec, Vc=vc_act[0], I=vc_act[1][0], time=vc_act[2])
+        vc_act = voltage_clamp_acti(amp, model=True)
+        #savez(date + cell + '02' + rec, Vc=vc_act[0], I=vc_act[1][0], time=vc_act[2])
     if vc_deact is True:
         sleep(1)
         print 'Starting VC deactivation protocol'

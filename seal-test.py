@@ -2,6 +2,7 @@
 """
 Seal-test to monitor the different steps in a patch experiment.
 """
+
 import sys
 sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 
@@ -53,7 +54,7 @@ fig = figure('1')
 
 while fignum_exists('1'):
     fig.clear()
-    sleep(1)
+    #sleep(1)
     Vc = -0.07*ones(int(100 * ms / dt))*volt
     I = []
     Vc[int(30 * ms / dt):int(70 * ms / dt)] = -10 * mV
