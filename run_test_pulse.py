@@ -16,7 +16,7 @@ from protocols import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d")
+date = datetime.now().strftime("%Y%m%d_%H:%M:%S_")
 
 model = True
 
@@ -51,7 +51,7 @@ else:
     print "Bridge resistance:",Rs / 1e6
 
 cell = 1
-nrec = 1
+nrec = 5
 
 ion()
 
@@ -63,6 +63,6 @@ for rec in range(nrec):
     sleep(1)
     
     tp = test_pulse(amp, model = model)
-    #savez(date + cell + 'tp' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
+    savez(date + cell + 'tp' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
    
 show(block=True)

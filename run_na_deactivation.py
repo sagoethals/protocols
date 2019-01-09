@@ -16,7 +16,7 @@ from protocols import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d")
+date = datetime.now().strftime("%Y%m%d_%H:%M_")
 
 model = True
 
@@ -48,7 +48,7 @@ else:
 
     amp.set_bridge_balance(True)
     Rs = amp.auto_bridge_balance()
-    print "Bridge resistance:",Rs / 1e6
+    print "Bridge resistance:", Rs / 1e6
 
 cell = 1
 nrec = 1
@@ -59,12 +59,12 @@ rec = str(nrec).zfill(2)
 cell = str(cell).zfill(2)
 
 vc_deact = voltage_clamp_deacti(amp, model=model)
-#savez(date + cell + 'deact' + rec, Vc=vc_act[0], I=vc_act[1], time=vc_act[2])
+savez(date + cell + 'deact' + rec, Vc=vc_act[0], I=vc_act[1], time=vc_act[2])
     
-show(block=True)
+#show(block=True)
 
 # PLot IV curve 
-start = int(40.07*ms/dt)
+start = int(40.06*ms/dt)
 end = int(50.*ms/dt)
 idx_peaks = []
 i_peaks = []
@@ -76,13 +76,13 @@ for i in range(len(vc_deact[0])):
     #print peak
     idx_peaks.append(peak)
     i_peaks.append(Is[peak])
-    v_peaks.append(vc_deact[0][i][5000])
+    v_peaks.append(vc_deact[0][i][int(50. * ms / dt)])
 
 figure('IV curve')
 #plot(v_peaks, i_peaks, 'k-')
-plot(v_peaks, i_peaks, '-o', color='black')
+plot(v_peaks, array(i_peaks)*1e-3, '-o', color='black')
 xlabel('V (mV)', fontsize=16)
-ylabel('Peak I (pA)', fontsize=16)
+ylabel('Peak I (nA)', fontsize=16)
 tight_layout()
   
 show()

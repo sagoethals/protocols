@@ -25,6 +25,7 @@ from time import sleep
 #dt = 0.02 * ms
 
 def test_pulse(amp, model = False):
+    sleep(1)
     if model == False:
         dt = 0.02*ms
     else:
@@ -143,7 +144,7 @@ def voltage_clamp_acti_with_dicho(amp, model = False, v_rest = -80.*mV):
         ntrials=31
         amplis = linspace(-80,-20, ntrials)*mV
         
-    Vc = v_rest * ones(int(100 * ms / dt))
+    Vc = v_rest * ones(int(250 * ms / dt))
     t = dt*arange(len(Vc))
     I = []
     Vcs = []
@@ -154,12 +155,12 @@ def voltage_clamp_acti_with_dicho(amp, model = False, v_rest = -80.*mV):
     for ampli in amplis:
         sleep(1) # 1 second between each voltage step
         print ampli
-        Vc[int(60 * ms / dt):int(80 * ms / dt)] = ampli
+        Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli
         #I.append(amp.acquire('I', V=Vc))
         Ii = amp.acquire('I', V=Vc)
         I.append(Ii/pA)
         Vcs.append(array(Vc/mV))
-        I_peaks.append(min(I[-1][int(60.4 * ms / dt):int(79 * ms / dt)]))
+        I_peaks.append(min(I[-1][int(200.4 * ms / dt):int(219 * ms / dt)]))
         
         subplot(211)
         plot(t/ms, array(Ii) / pA)
@@ -168,9 +169,9 @@ def voltage_clamp_acti_with_dicho(amp, model = False, v_rest = -80.*mV):
         pause(0.05)
     
     print I_peaks
-    idx_th = where(array(I_peaks)<=-1000.)[0][0]  #it finds the peak axonal current
+    idx_th = where(array(I_peaks)<=-500.)[0][0]  #it finds the peak axonal current
     print idx_th, I_peaks[idx_th]
-    v_threshold = Vcs[idx_th - 1][700] * mV
+    v_threshold = Vcs[idx_th - 1][int(210 * ms / dt)] * mV
     print 'Rough threshold:', v_threshold
     
     data_threshold = measure_threshold_dichotomy(amp, model = model, v_start = v_threshold, v_rest = v_rest)

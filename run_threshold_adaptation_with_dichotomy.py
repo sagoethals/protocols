@@ -18,7 +18,7 @@ from protocols import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d")
+date = datetime.now().strftime("%Y%m%d_%H:%M_")
 
 model = True
 
@@ -63,13 +63,12 @@ ion()
 if model: # lower threshold in the model
     vrs = linspace(-80., -70., 2)*mV
 else: # higher threshold in CGC
-    vrs = linspace(-80., -45., 8)*mV
+    vrs = linspace(-70., -45., 8)*mV
 
 for vr in vrs:
     vr_str = str(abs(vr/mV)).zfill(2)
-    sleep(1)
     vc_act_full = voltage_clamp_acti_with_dicho(amp, model=model, v_rest = vr)
-    #savez(date + cell + 'VCstep' + 'vr_str' + rec, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
+    savez(date + cell + 'VCstep' + vr_str + rec, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
     
     show(block=True)
     
@@ -86,7 +85,7 @@ for vr in vrs:
         #print peak
         idx_peaks.append(peak)
         i_peaks.append(Is[peak])
-        v_peaks.append(vc_act_full[0][i][700])
+        v_peaks.append(vc_act_full[0][i][int(210. * ms / dt)])
     
     idx_peaks_dicho = []
     i_peaks_dicho = []
@@ -98,7 +97,7 @@ for vr in vrs:
         #print peak
         idx_peaks_dicho.append(peak)
         i_peaks_dicho.append(Is[peak])
-        v_peaks_dicho.append(vc_act_full[3][0][i][700])
+        v_peaks_dicho.append(vc_act_full[3][0][i][int(210. * ms / dt)])
     
     figure('IV curve V0=%s' %vr_str)
     #plot(v_peaks, i_peaks, 'k-')

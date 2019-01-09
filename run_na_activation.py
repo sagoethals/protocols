@@ -104,10 +104,10 @@ for i in range(len(vc_act_dicho[0])):
 
 figure('IV curve')
 #plot(v_peaks, i_peaks, 'k-')
-plot(v_peaks, i_peaks, '-o', color='black')
+plot(v_peaks, array(i_peaks)*1e-3, '-o', color='black')
 plot(v_peaks_dicho, i_peaks_dicho, 'ro')
 xlabel('V (mV)', fontsize=16)
-ylabel('Peak I (pA)', fontsize=16)
+ylabel('Peak I (nA)', fontsize=16)
 tight_layout()
   
 show()
