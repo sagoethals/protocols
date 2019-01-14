@@ -7,11 +7,12 @@ A code to run a Na deactivation protocol, either with a neuron model or in a tru
 import sys
 #sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+sys.path.append("/home/sarah/Documents/repositories/protocols")
 
 #from devices import *
 from pylab import *
 from brianmodels import *
-from protocols import *
+from vc_protocols import *
 
 from datetime import datetime
 from time import sleep
@@ -58,14 +59,14 @@ ion()
 rec = str(nrec).zfill(2)
 cell = str(cell).zfill(2)
 
-vc_deact = voltage_clamp_deacti(amp, model=model)
-savez(date + cell + 'deact' + rec, Vc=vc_act[0], I=vc_act[1], time=vc_act[2])
+vc_deact = Na_deactivation(amp, model=model)
+#savez(date + cell + 'deact' + rec, Vc=vc_deact[0], I=vc_deact[1], time=vc_deact[2])
     
 #show(block=True)
 
 # PLot IV curve 
-start = int(40.06*ms/dt)
-end = int(50.*ms/dt)
+start = int(100.03*ms/dt)
+end = int(110.*ms/dt)
 idx_peaks = []
 i_peaks = []
 v_peaks = []
@@ -76,11 +77,11 @@ for i in range(len(vc_deact[0])):
     #print peak
     idx_peaks.append(peak)
     i_peaks.append(Is[peak])
-    v_peaks.append(vc_deact[0][i][int(50. * ms / dt)])
+    v_peaks.append(vc_deact[0][i][int(110. * ms / dt)])
 
 figure('IV curve')
 #plot(v_peaks, i_peaks, 'k-')
-plot(v_peaks, array(i_peaks)*1e-3, '-o', color='black')
+plot(v_peaks, i_peaks, '-o', color='black')
 xlabel('V (mV)', fontsize=16)
 ylabel('Peak I (nA)', fontsize=16)
 tight_layout()

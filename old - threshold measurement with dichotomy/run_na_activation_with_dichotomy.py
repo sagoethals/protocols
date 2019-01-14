@@ -1,8 +1,9 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
+
 """
 
 A code to run a Na activation protocol, either with a neuron model or in a true experiment.
+We measure the threshold thanks to a step protocol combined to dichotomy method.
+
 """
 
 import sys
@@ -34,7 +35,7 @@ else:
     mV = 0.001
     volt = 1
     nA = 1e-9
-    dt = 0.02*ms #0.1 * ms
+    dt = 0.02 * ms
     pF = 1e-12
     MOhm = 1e6
 
@@ -52,7 +53,7 @@ else:
     print "Bridge resistance:",Rs / 1e6
 
 cell = 1
-nrec = 1
+rec = 1
 
 ion()
 
@@ -61,53 +62,45 @@ cell = str(cell).zfill(2)
 
 sleep(1)
 
-# usual step protocol
-vc_act = voltage_clamp_acti(amp, model=model)
-print 'Total time:', len(vc_act[0])*(len(vc_act[0][0])*dt + 1*second)
-# dichotomy method (pblm: being sure of capturing the peak axonal current and the baseline current)
-vc_act_dicho = measure_threshold_dichotomy(amp, model=model)
-print 'Total time:', len(vc_act_dicho[0])*(len(vc_act_dicho[0][0])*dt + 1*second)
-#savez(date + cell + '02' + rec, Vc=vc_act[0], I=vc_act[1], time=vc_act[2])
+vc_act_full = voltage_clamp_acti_with_dicho(amp, model=model, v_rest = -80.*mV)
+
+#savez(date + cell + 'VCstep' + rec, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
     
 show(block=True)
 
 # PLot IV curve for the two techniques
-start = int(60.40*ms/dt)
-end = int(79.0*ms/dt)
+start = int(200.40*ms/dt)
+end = int(219.0*ms/dt)
 idx_peaks = []
 i_peaks = []
 v_peaks = []
 
-for i in range(len(vc_act[0])): 
-    Is = vc_act[1][i] 
+for i in range(len(vc_act_full[0])): 
+    Is = vc_act_full[1][i] 
     peak = argmin(Is[start:end]) + start
     #print peak
     idx_peaks.append(peak)
     i_peaks.append(Is[peak])
-    v_peaks.append(vc_act[0][i][700])
+    v_peaks.append(vc_act_full[0][i][2100])
 
 idx_peaks_dicho = []
 i_peaks_dicho = []
 v_peaks_dicho = []
 
-for i in range(len(vc_act_dicho[0])): 
-    Is = vc_act_dicho[1][i] 
+for i in range(len(vc_act_full[3][0])): 
+    Is = vc_act_full[3][1][i] 
     peak = argmin(Is[start:end]) + start
     #print peak
     idx_peaks_dicho.append(peak)
     i_peaks_dicho.append(Is[peak])
-    v_peaks_dicho.append(vc_act_dicho[0][i][700])
+    v_peaks_dicho.append(vc_act_full[3][0][i][2100])
     
-#idx_th = where(array(i_peaks)>=-200.)[0][-1]
-#v_threshold = vs[idx_th]
-#peak_i = i_peaks[idx_th+1] - i_peaks[idx_th]
-
 figure('IV curve')
 #plot(v_peaks, i_peaks, 'k-')
 plot(v_peaks, i_peaks, '-o', color='black')
 plot(v_peaks_dicho, i_peaks_dicho, 'ro')
 xlabel('V (mV)', fontsize=16)
-ylabel('Peak I (nA)', fontsize=16)
+ylabel('Peak I (pA)', fontsize=16)
 tight_layout()
   
 show()

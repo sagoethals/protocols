@@ -1,8 +1,10 @@
 
+
 """
 
 A code to run a Na activation protocol, either with a neuron model or in a true experiment.
-We measure the threshold thanks to a step protocol combined to dichotomy method.
+We measure the threshold thanks to 2 step protocols. The first one finds the gross threshold, 
+the second one finds an accurate value of the threshold.
 
 """
 
@@ -13,7 +15,7 @@ sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 #from devices import *
 from pylab import *
 from brianmodels import *
-from protocols import *
+from vc_protocols import *
 
 from datetime import datetime
 from time import sleep
@@ -62,14 +64,14 @@ cell = str(cell).zfill(2)
 
 sleep(1)
 
-vc_act_full = voltage_clamp_acti_with_dicho(amp, model=model, v_rest = -80.*mV)
+vc_act_full = Na_activation_with_threshold(amp, model=model, v_rest = -80.*mV)
 #savez(date + cell + 'VCstep' + rec, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
     
 show(block=True)
 
 # PLot IV curve for the two techniques
-start = int(60.40*ms/dt)
-end = int(79.0*ms/dt)
+start = int(200.40*ms/dt)
+end = int(219.0*ms/dt)
 idx_peaks = []
 i_peaks = []
 v_peaks = []
@@ -80,7 +82,7 @@ for i in range(len(vc_act_full[0])):
     #print peak
     idx_peaks.append(peak)
     i_peaks.append(Is[peak])
-    v_peaks.append(vc_act_full[0][i][700])
+    v_peaks.append(vc_act_full[0][i][2100])
 
 idx_peaks_dicho = []
 i_peaks_dicho = []
@@ -92,11 +94,11 @@ for i in range(len(vc_act_full[3][0])):
     #print peak
     idx_peaks_dicho.append(peak)
     i_peaks_dicho.append(Is[peak])
-    v_peaks_dicho.append(vc_act_full[3][0][i][700])
+    v_peaks_dicho.append(vc_act_full[3][0][i][2100])
     
 figure('IV curve')
 #plot(v_peaks, i_peaks, 'k-')
-plot(v_peaks, i_peaks, '-o', color='black')
+plot(v_peaks, i_peaks, '-o', color='blue')
 plot(v_peaks_dicho, i_peaks_dicho, 'ro')
 xlabel('V (mV)', fontsize=16)
 ylabel('Peak I (pA)', fontsize=16)
