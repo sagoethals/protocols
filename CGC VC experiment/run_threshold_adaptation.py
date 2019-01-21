@@ -13,7 +13,7 @@ sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 #from devices import *
 from pylab import *
 from brianmodels import *
-from protocols import *
+from vc_protocols import *
 
 from datetime import datetime
 from time import sleep
@@ -67,6 +67,7 @@ else: # higher threshold in CGC
 
 for vr in vrs:
     vr_str = str(abs(vr/mV)).zfill(2)
+    print 'Threshold adaptation protocol, Vr = ', vr 
     vc_act_full = Na_activation_with_threshold(amp, model=model, v_rest = vr)
     savez(date + cell + 'VCstep' + vr_str + rec, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
     

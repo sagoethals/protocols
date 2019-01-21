@@ -7,11 +7,12 @@ Test pulse protocol.
 import sys
 #sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+#sys.path.append("/home/sarah/Documents/repositories/")
 
 #from devices import *
 from pylab import *
 from brianmodels import *
-from protocols import *
+from vc_protocols import *
 
 from datetime import datetime
 from time import sleep

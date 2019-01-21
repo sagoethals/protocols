@@ -52,7 +52,7 @@ else:
     print "Bridge resistance:", Rs / 1e6
 
 cell = 1
-nrec = 1
+nrec = 3
 
 ion()
 
