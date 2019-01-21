@@ -5,11 +5,10 @@ Test pulse protocol.
 """
 
 import sys
-#sys.path.append("/Users/Romain/PycharmProjects/clamper/")
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
-#sys.path.append("/home/sarah/Documents/repositories/")
+sys.path.append("/Users/Romain/PycharmProjects/clamper/")
+#sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 
-#from devices import *
+from devices import *
 from pylab import *
 from brianmodels import *
 from vc_protocols import *
@@ -17,9 +16,9 @@ from vc_protocols import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d_%H:%M:%S_")
+date = datetime.now().strftime("%Y%m%d_%H%M%S_")
 
-model = True
+model = False
 
 if model:
     from brian2 import *
@@ -64,6 +63,6 @@ for rec in range(nrec):
     sleep(1)
     
     tp = test_pulse(amp, model = model)
-    savez(date + cell + 'tp' + rec, Vc=tp[0], I=tp[1][0], time=tp[2] )
+    savez(date + cell  + rec + '_Test Pulse' , Vc=tp[0], I=tp[1][0], time=tp[2] )
    
 show(block=True)

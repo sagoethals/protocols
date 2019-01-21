@@ -1,11 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/vc_protocols.py" line="15" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/oscilloscope" line="47" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9e208fe1-09f6-45fd-9063-dbab88688dac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/first_experiment.py" afterPath="$PROJECT_DIR$/first_experiment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protocols.py" afterPath="$PROJECT_DIR$/protocols.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seal-test.py" afterPath="$PROJECT_DIR$/seal-test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oscilloscope" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/protocols.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:18_01VCstep70.001.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:18_01VCstep80.001.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:21_01VCstep70.001.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:21_01VCstep80.001.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:28_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:35_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:51_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_14:56_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_15:03_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/20190114_15:10_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190114_15:52_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190114_15:57_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190114_16:03_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190114_16:07_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190114_16:10_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190114_16:21_01deact01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:56:14_01tp00.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:56:14_01tp01.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:56:14_01tp02.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:56:14_01tp03.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:56:14_01tp04.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:57_01VCstep70.005.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/20190121_11:57_01VCstep80.005.npz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/run_na_deactivation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/run_threshold_adaptation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/current clamp/current_clamp.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/current clamp/current_clamp_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/IV_curve_V0=70.0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/IV_curve_V0=70.0_zoom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/IV_curve_deactivation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/IV_curve_deactivation_and_act.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/IV_curve_na_act_with_dicho.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Test_pulses.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/VC_-_Deactivation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/VC_-_activation_-_V0=-80.0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/VC_-_activation_-_V0=-80.0_zoom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old - threshold measurement with dichotomy/run_na_activation_with_dichotomy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old - threshold measurement with dichotomy/run_threshold_adaptation_with_dichotomy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/read_npz_data.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/run_fluctuation_analysis.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/run_na_activation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/run_na_activation_with_threshold_measurement.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seal-test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/first_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/voltage_clamp_dec.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/voltage_clamp_inc.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/voltage_clamp_thres.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_protocols.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,38 +72,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="first_experiment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/first_experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="20" lean-forward="false" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seal-test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/seal-test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="protocols.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protocols.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,11 +90,18 @@
         <option value="$PROJECT_DIR$/protocols.py" />
         <option value="$PROJECT_DIR$/first_experiment.py" />
         <option value="$PROJECT_DIR$/seal-test.py" />
+        <option value="$PROJECT_DIR$/vc_protocols.py" />
+        <option value="$PROJECT_DIR$/oscilloscope.py" />
+        <option value="$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
+        <option value="$PROJECT_DIR$/CGC VC experiment/run_threshold_adaptation.py" />
+        <option value="$PROJECT_DIR$/CGC VC experiment/run_na_deactivation.py" />
+        <option value="$PROJECT_DIR$/oscilloscope" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
+    <option name="x" value="2" />
+    <option name="y" value="16" />
     <option name="width" value="1292" />
     <option name="height" value="1000" />
   </component>
@@ -80,8 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,15 +127,27 @@
               <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
               <item name="protocols" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="CGC VC experiment" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Romain\PycharmProjects\protocols" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,8 +161,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.seal-test">
-    <configuration name="first_experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.oscilloscope">
+    <configuration name="oscilloscope" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -124,7 +174,58 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="protocols" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/first_experiment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/oscilloscope" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="run_na_deactivation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CGC VC experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="protocols" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CGC VC experiment/run_na_deactivation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="run_test_pulse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CGC VC experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="protocols" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="run_threshold_adaptation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CGC VC experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="protocols" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CGC VC experiment/run_threshold_adaptation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,14 +247,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Python.first_experiment" />
-      <item index="1" class="java.lang.String" itemvalue="Python.seal-test" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.seal-test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run_test_pulse" />
+      <item index="2" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
+      <item index="4" class="java.lang.String" itemvalue="Python.oscilloscope" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.seal-test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.first_experiment" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.oscilloscope" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
+        <item index="3" class="java.lang.String" itemvalue="Python.run_test_pulse" />
+        <item index="4" class="java.lang.String" itemvalue="Python.seal-test" />
       </list>
     </recent_temporary>
   </component>
@@ -171,18 +278,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1292" height="1000" extended-state="0" />
+    <frame x="2" y="16" width="1292" height="1000" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30357143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30844155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2318339" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -201,14 +308,23 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
+    <entry file="file://$PROJECT_DIR$/seal-test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="20" lean-forward="false" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protocols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -225,14 +341,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/seal-test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -249,14 +358,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
@@ -265,14 +367,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
@@ -281,14 +376,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -297,14 +385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -313,14 +394,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -329,14 +403,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -345,14 +412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -361,14 +421,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2193">
@@ -377,14 +430,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2193">
@@ -393,14 +439,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1547">
@@ -417,18 +456,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_experiment.py">
+    <entry file="file://$PROJECT_DIR$/first_experiment.py" />
+    <entry file="file://$PROJECT_DIR$/seal-test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="20" lean-forward="false" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+        <state relative-caret-position="383">
+          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seal-test.py">
+    <entry file="file://$PROJECT_DIR$/CGC VC experiment/run_threshold_adaptation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="567">
+          <caret line="87" column="32" lean-forward="false" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CGC VC experiment/run_na_deactivation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oscilloscope.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oscilloscope">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_protocols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="80" column="35" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="35" />
           <folding />
         </state>
       </provider>

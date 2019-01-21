@@ -8,19 +8,19 @@ import sys
 sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 #sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 
-#from devices import *  # no need with the model
+from devices import *  # no need with the model
 from pylab import *
 from brian2 import * # need to be removed for actual recording
 from time import sleep
 
-## For true recordings:
-#ms = 0.001
-#pA = 1e-12
-#mV = 0.001
-#volt = 1
-#nA = 1e-9
-#pF = 1e-12
-#MOhm = 1e6
+# For true recordings:
+ms = 0.001
+pA = 1e-12
+mV = 0.001
+volt = 1
+nA = 1e-9
+pF = 1e-12
+MOhm = 1e6
 
 #dt = 0.02 * ms
 
@@ -31,8 +31,8 @@ def test_pulse(amp, model = False):
         dt = 0.02*ms
     else:
         dt = 0.1*ms
-        
-    Vc = -0.08*ones(int(40 * ms / dt))*volt
+
+    Vc = -0.08 * ones(int(40 * ms / dt)) * volt
     I = []
     Vc[int(10 * ms / dt):int(20 * ms / dt)] = -90 * mV
     Vc[int(20 * ms / dt):int(30 * ms / dt)] = -70 * mV

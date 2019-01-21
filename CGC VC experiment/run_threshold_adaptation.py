@@ -7,10 +7,10 @@ We measure the threshold thanks to 2 step protocols.
 """
 
 import sys
-#sys.path.append("/Users/Romain/PycharmProjects/clamper/")
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+sys.path.append("/Users/Romain/PycharmProjects/clamper/")
+#sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 
-#from devices import *
+from devices import *
 from pylab import *
 from brianmodels import *
 from vc_protocols import *
@@ -18,9 +18,9 @@ from vc_protocols import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d_%H:%M_")
+date = datetime.now().strftime("%Y%m%d_%H%M%S_")
 
-model = True
+model = False
 
 if model:
     from brian2 import *
@@ -53,7 +53,7 @@ else:
     print "Bridge resistance:",Rs / 1e6
 
 cell = 1
-rec = 1
+nrec = 1
 
 rec = str(nrec).zfill(2)
 cell = str(cell).zfill(2)
@@ -69,7 +69,7 @@ for vr in vrs:
     vr_str = str(abs(vr/mV)).zfill(2)
     print 'Threshold adaptation protocol, Vr = ', vr 
     vc_act_full = Na_activation_with_threshold(amp, model=model, v_rest = vr)
-    savez(date + cell + 'VCstep' + vr_str + rec, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
+    savez(date + cell  +  rec + '_VC adaptation_' + vr_str, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
     
     show(block=True)
     

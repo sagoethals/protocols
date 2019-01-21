@@ -5,11 +5,11 @@ A code to run a Na deactivation protocol, either with a neuron model or in a tru
 """
 
 import sys
-#sys.path.append("/Users/Romain/PycharmProjects/clamper/")
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
-sys.path.append("/home/sarah/Documents/repositories/protocols")
+sys.path.append("/Users/Romain/PycharmProjects/clamper/")
+#sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+#sys.path.append("/home/sarah/Documents/repositories/protocols")
 
-#from devices import *
+from devices import *
 from pylab import *
 from brianmodels import *
 from vc_protocols import *
@@ -17,9 +17,9 @@ from vc_protocols import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d_%H:%M_")
+date = datetime.now().strftime("%Y%m%d_%H%M%S_")
 
-model = True
+model = False
 
 if model:
     from brian2 import *
@@ -52,7 +52,7 @@ else:
     print "Bridge resistance:", Rs / 1e6
 
 cell = 1
-nrec = 3
+nrec = 1
 
 ion()
 
@@ -60,9 +60,9 @@ rec = str(nrec).zfill(2)
 cell = str(cell).zfill(2)
 
 vc_deact = Na_deactivation(amp, model=model)
-#savez(date + cell + 'deact' + rec, Vc=vc_deact[0], I=vc_deact[1], time=vc_deact[2])
+savez(date + cell + rec + '_Deactivation', Vc=vc_deact[0], I=vc_deact[1], time=vc_deact[2])
     
-#show(block=True)
+show(block=True)
 
 # PLot IV curve 
 start = int(100.03*ms/dt)
