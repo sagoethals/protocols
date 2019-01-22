@@ -14,7 +14,7 @@ from acquisition import *
 from pylab import *
 from signals import *
 import os
-from init_rig import *
+from init_rig_multiclamp import *
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
@@ -40,7 +40,7 @@ line, = plot(t/ms,0*t)
 
 def update(i):
 
-    I = board.acquire('I', V=Vc)
+    I = amp.acquire('I', V=Vc)
         #V = board.acquire('V', I=Ic)
     ## Calculate offset and resistance
     #V0 = median(V[:int(T0/dt)]) # calculated on initial pause
