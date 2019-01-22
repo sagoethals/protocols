@@ -1,14 +1,7 @@
 '''
-An oscilloscope showing the voltage response to a pulse
+An oscilloscope showing the current response to a voltage step
 
-TODO:
-* maybe add slider or so for current amplitude and duration
-* calculate resistance, V0 etc
 '''
-
-import sys
-sys.path.append("/Users/Romain/PycharmProjects/Paramecium/")
-sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 
 from acquisition import *
 from pylab import *
@@ -30,25 +23,31 @@ Vc = sequence([constant(T0, dt) * 0 * mV,
 fig, ax = plt.subplots()
 plt.subplots_adjust(bottom=0.2)
 plt.xlabel('Time (ms)')
-plt.ylabel('I (nA)')
-#resistance_text = ax.text(0.05, 0.9, '', transform=ax.transAxes)
+plt.ylabel('I (pA)')
+resistance_text = ax.text(0.05, 0.9, '', transform=ax.transAxes)
 
 t = dt*arange(len(Vc))
 xlim(0,max(t/ms))
-#ylim(-150,100)
+ylim(-10,10)
 line, = plot(t/ms,0*t)
 
-def update(i):
+def callback(event):
+    y = line.get_ydata()
+    ax.set_ylim(min(y),max(y))
 
+ax_button = plt.axes([0.81, 0.05, 0.1, 0.075])
+switch_button = Button(ax_button, 'Adjust')
+switch_button.on_clicked(callback)
+
+def update(i):
     I = amp.acquire('I', V=Vc)
-        #V = board.acquire('V', I=Ic)
     ## Calculate offset and resistance
-    #V0 = median(V[:int(T0/dt)]) # calculated on initial pause
-    #Vpeak = median(V[int((T0+2*T1/3.)/dt):int((T0+T1)/dt)]) # calculated on last third of the pulse
-    #R = (Vpeak-V0)/I0
+    I0 = median(I[:int(T0/dt)]) # calculated on initial pause
+    Ipeak = median(I[int((T0+2*T1/3.)/dt):int((T0+T1)/dt)]) # calculated on last third of the pulse
+    R = V0/(Ipeak-I0)
     # Plot
     line.set_ydata(I/pA)
-    #resistance_text.set_text('{:.1f} MOhm'.format(R/Mohm))
+    resistance_text.set_text('{:.1f} MOhm'.format(R/Mohm))
     return line,
 
 anim = animation.FuncAnimation(fig,update)

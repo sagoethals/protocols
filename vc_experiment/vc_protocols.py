@@ -43,8 +43,11 @@ def test_pulse(amp, model = False):
     for Ii in I:
         subplot(211)
         plot(t/ms, array(Ii) / pA)
+        ylabel('I (pA)')
         subplot(212)
         plot(t/ms, Vc/mV)
+        ylabel('Vc (mV)')
+        xlabel('t (ms)')
         pause(0.05)
         
     return Vc, I, t/ms
@@ -84,8 +87,11 @@ def measure_threshold_steps(amp, model = False, v_start = -60.*mV, v_range = 4.*
         
         subplot(211)
         plot(t/ms, array(Ii) / pA)
+        ylabel('I (pA)')
         subplot(212)
         plot(t/ms, array(Vc) / mV)
+        ylabel('Vc (mV)')
+        xlabel('t (ms)')
         pause(0.05)
         
     return Vcs, I, t/ms
@@ -127,8 +133,11 @@ def Na_activation_with_threshold(amp, model = False, v_rest = -80.*mV):
         
         subplot(211)
         plot(t/ms, array(Ii) / pA)
+        ylabel('I (pA)')
         subplot(212)
         plot(t/ms, array(Vc) / mV)
+        ylabel('Vc (mV)')
+        xlabel('t (ms)')
         pause(0.05)
     
     print I_peaks
@@ -173,8 +182,11 @@ def Na_deactivation(amp, model = False):
         
         subplot(211)
         plot(t/ms, array(Ii) / pA, color = colors[i])
+        ylabel('I (pA)')
         subplot(212)
         plot(t/ms, array(Vc) / mV, color = colors[i])
+        ylabel('Vc (mV)')
+        xlabel('t (ms)')
         pause(0.05)
         
     return Vcs, I, t/ms

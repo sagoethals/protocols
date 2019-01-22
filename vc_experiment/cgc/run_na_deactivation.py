@@ -9,10 +9,10 @@ sys.path.append("/Users/Romain/PycharmProjects/clamper/")
 #sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 #sys.path.append("/home/sarah/Documents/repositories/protocols")
 
-from devices import *
+from clamper.devices import *
 from pylab import *
-from brianmodels import *
-from vc_protocols import *
+from clamper.brianmodels import *
+from vc_experiment import *
 
 from datetime import datetime
 from time import sleep
