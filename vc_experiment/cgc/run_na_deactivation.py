@@ -17,7 +17,7 @@ from vc_experiment import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d_%H%M%S_")
+date = datetime.now().strftime("%Y.%m.%d_%H.%M.%S_")
 
 model = False
 
@@ -59,8 +59,10 @@ ion()
 rec = str(nrec).zfill(2)
 cell = str(cell).zfill(2)
 
+save_path = "/Users/Romain/PycharmProjects/protocols/data/"
+
 vc_deact = Na_deactivation(amp, model=model)
-savez(date + cell + rec + '_Deactivation', Vc=vc_deact[0], I=vc_deact[1], time=vc_deact[2])
+savez(save_path + date + cell + rec + '_Deactivation', Vc=vc_deact[0], I=vc_deact[1], time=vc_deact[2])
     
 show(block=True)
 

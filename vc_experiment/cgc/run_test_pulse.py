@@ -16,7 +16,7 @@ from vc_experiment import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d_%H%M%S_")
+date = datetime.now().strftime("%Y.%m.%d_%H.%M.%S_")
 
 model = False
 
@@ -57,7 +57,7 @@ ion()
 
 print 'Starting test pulse protocol'
 #save_path = "/home/sarah/Desktop/"
-save_path = "/home/sarah/Desktop/"
+save_path = "/Users/Romain/PycharmProjects/protocols/data/"
 
 for rec in range(nrec):
     rec = str(rec).zfill(2)

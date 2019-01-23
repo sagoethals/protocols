@@ -18,7 +18,7 @@ from vc_experiment import *
 from datetime import datetime
 from time import sleep
 
-date = datetime.now().strftime("%Y%m%d_%H%M%S_")
+date = datetime.now().strftime("%Y.%m.%d_%H.%M.%S_")
 
 model = False
 
@@ -60,6 +60,8 @@ cell = str(cell).zfill(2)
 
 ion()
 
+save_path = "/Users/Romain/PycharmProjects/protocols/data/"
+
 if model: # lower threshold in the model
     vrs = linspace(-80., -70., 2)*mV
 else: # higher threshold in CGC
@@ -69,7 +71,7 @@ for vr in vrs:
     vr_str = str(abs(vr/mV)).zfill(2)
     print 'Threshold adaptation protocol, Vr = ', vr 
     vc_act_full = Na_activation_with_threshold(amp, model=model, v_rest = vr)
-    savez(date + cell  +  rec + '_VC adaptation_' + vr_str, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
+    savez(save_path + date + cell  +  rec + '_VC adaptation_' + vr_str, Vc=vc_act_full[0], I=vc_act_full[1], time=vc_act_full[2], thresh = vc_act_full[3])
     
     show(block=True)
     

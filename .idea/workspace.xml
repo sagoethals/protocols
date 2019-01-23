@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e208fe1-09f6-45fd-9063-dbab88688dac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/acquisition/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/acquisition/board_init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/acquisition/units.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/signals/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/signals/waveform.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/run_na_deactivation.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CGC VC experiment/run_threshold_adaptation.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VC experiment/oscilloscope.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VC experiment/vc_protocols.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/protocols.iml" afterPath="$PROJECT_DIR$/.idea/protocols.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/init_rig_multiclamp.py" afterPath="$PROJECT_DIR$/init_rig_multiclamp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read_npz_data.py" afterPath="$PROJECT_DIR$/read_npz_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py" afterPath="$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" afterPath="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" afterPath="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +16,62 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="vc_oscillo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/vc_oscillo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <folding>
+                <element signature="e#73#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_test_pulse.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_threshold_adaptation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="66" column="31" lean-forward="false" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_npz_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/read_npz_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+              <folding>
+                <element signature="e#25#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_na_deactivation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,18 +98,19 @@
         <option value="$PROJECT_DIR$/VC experiment/vc_oscillo.py" />
         <option value="$PROJECT_DIR$/VC experiment/__init__.py" />
         <option value="$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
         <option value="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" />
         <option value="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
         <option value="$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
+        <option value="$PROJECT_DIR$/read_npz_data.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="31" />
-    <option name="width" value="1292" />
-    <option name="height" value="1000" />
+    <option name="x" value="91" />
+    <option name="y" value="44" />
+    <option name="width" value="1139" />
+    <option name="height" value="906" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -98,25 +146,6 @@
               <item name="protocols" type="462c0819:PsiDirectoryNode" />
               <item name="acquisition" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="protocols" type="462c0819:PsiDirectoryNode" />
-              <item name="signals" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="protocols" type="462c0819:PsiDirectoryNode" />
-              <item name="vc_experiment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="protocols" type="462c0819:PsiDirectoryNode" />
-              <item name="vc_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="cgc" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -145,20 +174,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_na_deactivation">
-    <configuration name="run_na_deactivation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.read_npz_data">
+    <configuration name="read_npz_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vc_experiment/cgc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="protocols" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_npz_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,37 +243,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="vc_oscillo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="vc_oscillo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VC experiment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vc_experiment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="protocols" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VC experiment/vc_oscillo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vc_experiment/vc_oscillo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.run_test_pulse" />
-      <item index="1" class="java.lang.String" itemvalue="Python.vc_oscillo" />
-      <item index="2" class="java.lang.String" itemvalue="Python.run_test_pulse (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
-      <item index="4" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run_test_pulse (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.vc_oscillo (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.read_npz_data" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.read_npz_data" />
         <item index="1" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
         <item index="2" class="java.lang.String" itemvalue="Python.run_test_pulse (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.run_test_pulse" />
-        <item index="4" class="java.lang.String" itemvalue="Python.vc_oscillo" />
+        <item index="3" class="java.lang.String" itemvalue="Python.vc_oscillo (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.run_test_pulse" />
       </list>
     </recent_temporary>
   </component>
@@ -262,12 +291,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="31" width="1292" height="1000" extended-state="0" />
+    <frame x="91" y="44" width="1139" height="906" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32386363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3846154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2318339" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858992" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -292,7 +321,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
     <entry file="file://$PROJECT_DIR$/seal-test.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/first_experiment.py" />
@@ -364,23 +392,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
-    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
+    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        <state relative-caret-position="323">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/vc_oscillo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
             <element signature="e#73#98#0" expanded="true" />
           </folding>
@@ -389,25 +416,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="132" column="8" lean-forward="true" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="27" />
+        <state relative-caret-position="646">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="66" column="31" lean-forward="false" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_npz_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
