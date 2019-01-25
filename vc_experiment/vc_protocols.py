@@ -32,10 +32,10 @@ def test_pulse(amp, model = False):
     else:
         dt = 0.1*ms
 
-    Vc = -0.08 * ones(int(40 * ms / dt)) * volt
+    Vc = 0 * ones(int(40 * ms / dt)) * volt
     I = []
-    Vc[int(10 * ms / dt):int(20 * ms / dt)] = -90 * mV
-    Vc[int(20 * ms / dt):int(30 * ms / dt)] = -70 * mV
+    Vc[int(10 * ms / dt):int(20 * ms / dt)] = -10 * mV
+    Vc[int(20 * ms / dt):int(30 * ms / dt)] = +10 * mV
     I.append(amp.acquire('I', V=Vc))
     t = dt*arange(len(Vc))
     
@@ -107,7 +107,8 @@ def Na_activation_with_threshold(amp, model = False, v_rest = -80.*mV):
     if model == False:
         dt = 0.02*ms
         ntrials=11
-        amplis = linspace(-60,-20, ntrials)*mV
+        #amplis = linspace(-60,-20, ntrials)*mV
+        amplis = linspace(20, 60, ntrials) * mV
     else:
         dt = 0.1*ms
         ntrials=16
@@ -141,7 +142,7 @@ def Na_activation_with_threshold(amp, model = False, v_rest = -80.*mV):
         pause(0.05)
     
     print I_peaks
-    idx_th = where(array(I_peaks)<=-1000.)[0][0]  #it finds the peak axonal current !!! exact value has to be changed for CGC
+    idx_th = where(array(I_peaks)<=-400.)[0][0]  #it finds the peak axonal current !!! exact value has to be changed for CGC
     print idx_th, I_peaks[idx_th]
     v_threshold = Vcs[idx_th - 1][int(210 * ms / dt)] * mV
     print 'Rough threshold:', v_threshold
@@ -154,7 +155,8 @@ def Na_deactivation(amp, model = False):
     if model == False:
         dt = 0.02*ms
         ntrials=31
-        amplis = linspace(-30,-90, ntrials)*mV
+        #amplis = linspace(-30,-90, ntrials)*mV
+        amplis = linspace(50, -10, ntrials) * mV
     else:
         dt = 0.01*ms
         ntrials=21

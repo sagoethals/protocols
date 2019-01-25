@@ -65,7 +65,8 @@ save_path = "/Users/Romain/PycharmProjects/protocols/data/"
 if model: # lower threshold in the model
     vrs = linspace(-80., -70., 2)*mV
 else: # higher threshold in CGC
-    vrs = linspace(-80., -45., 9)*mV
+    #vrs = linspace(-80., -45., 8)*mV
+    vrs = linspace(0., 35., 8) * mV
 
 for vr in vrs:
     vr_str = str(abs(vr/mV)).zfill(2)

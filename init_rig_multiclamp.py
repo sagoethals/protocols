@@ -6,7 +6,7 @@ This is specific for the Multiclamp 700B.
 from clamper import *
 from clamper.devices import *
 #from clamper.devices.gains.axoclamp2b import gains
-from acquisition.units import *
+from clamper.setup.units import *
 
 board = NI()
 
