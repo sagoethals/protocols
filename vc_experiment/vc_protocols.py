@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Patch clamp protocols.
+
+!!! Voltage values are with respect to -80 mV, the holding potential.
 """
 
 import sys
@@ -52,7 +54,7 @@ def test_pulse(amp, model = False):
         
     return Vc, I, t/ms
 
-def measure_threshold_steps(amp, model = False, v_start = -60.*mV, v_range = 4.*mV, v_rest = -80.*mV):
+def measure_threshold_steps(amp, model = False, v_start = 20*mV, v_range = 4.*mV, v_rest = 0.*mV):
     """
     A voltage step protocol to measure accurately the threshold:
         v_start: voltage of the first step
@@ -96,7 +98,7 @@ def measure_threshold_steps(amp, model = False, v_start = -60.*mV, v_range = 4.*
         
     return Vcs, I, t/ms
 
-def Na_activation_with_threshold(amp, model = False, v_rest = -80.*mV):
+def Na_activation_with_threshold(amp, model = False, v_rest = 0.*mV):
     """
     A VC step protocol to measure Na currents:
         v_rest: clamping voltage before the steps
@@ -130,7 +132,7 @@ def Na_activation_with_threshold(amp, model = False, v_rest = -80.*mV):
         Ii = amp.acquire('I', V=Vc)
         I.append(Ii/pA)
         Vcs.append(array(Vc/mV))
-        I_peaks.append(min(I[-1][int(200.4 * ms / dt):int(219 * ms / dt)]))
+        I_peaks.append(min(I[-1][int(200.2 * ms / dt):int(219 * ms / dt)]))
         
         subplot(211)
         plot(t/ms, array(Ii) / pA)
@@ -142,7 +144,7 @@ def Na_activation_with_threshold(amp, model = False, v_rest = -80.*mV):
         pause(0.05)
     
     print I_peaks
-    idx_th = where(array(I_peaks)<=-400.)[0][0]  #it finds the peak axonal current !!! exact value has to be changed for CGC
+    idx_th = where(array(I_peaks)<=-200.)[0][0]  #it finds the peak axonal current !!! exact value has to be changed for CGC
     print idx_th, I_peaks[idx_th]
     v_threshold = Vcs[idx_th - 1][int(210 * ms / dt)] * mV
     print 'Rough threshold:', v_threshold
@@ -162,7 +164,7 @@ def Na_deactivation(amp, model = False):
         ntrials=21
         amplis = linspace(-40,-100, ntrials)*mV
 
-    Vc = -0.08*ones(int(140 * ms / dt))*volt
+    Vc = 0.*ones(int(140 * ms / dt))*volt
     t = dt*arange(len(Vc))
     I = []
     Vcs = []
@@ -174,7 +176,7 @@ def Na_deactivation(amp, model = False):
         ampli = amplis[i]
         sleep(1)
         print ampli
-        Vc[int(100 * ms / dt):int(100.02 * ms / dt)] = -50.* mV  #the time depends on the recording temperature, for CGC at RT 200 µs should be OK
+        Vc[int(100 * ms / dt):int(100.02 * ms / dt)] = 40.* mV  #the time depends on the recording temperature, for CGC at RT 200 µs should be OK
         Vc[int(100.02 * ms / dt):int(120. * ms / dt)] = ampli
         #I.append(amp.acquire('I', V=Vc))
         #Vcs.append(array(Vc))
