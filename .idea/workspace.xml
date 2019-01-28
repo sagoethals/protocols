@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e208fe1-09f6-45fd-9063-dbab88688dac" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acquisition/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acquisition/board_init.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acquisition/units.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/signals/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/signals/waveform.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/init_rig_multiclamp.py" afterPath="$PROJECT_DIR$/init_rig_multiclamp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" afterPath="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/vc_protocols.py" afterPath="$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,21 +13,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="run_test_pulse.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_test_pulse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+            <state relative-caret-position="130">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_threshold_adaptation.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="run_threshold_adaptation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="106" column="33" lean-forward="true" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+            <state relative-caret-position="102">
+              <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -44,8 +36,8 @@
       <file leaf-file-name="run_na_deactivation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="93">
+              <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -86,11 +78,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="71" />
-    <option name="y" value="54" />
-    <option name="width" value="1139" />
-    <option name="height" value="906" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="248" />
+    <option name="y" value="-776" />
+    <option name="width" value="1040" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -108,7 +100,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,18 +121,14 @@
             <path>
               <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
               <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="clamper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="clamper" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="vc_experiment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,6 +136,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../clamper" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Romain\PycharmProjects\protocols\" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Romain\PycharmProjects\protocols" />
     </key>
@@ -165,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_test_pulse (1)">
+  <component name="RunManager" selected="Python.run_threshold_adaptation">
     <configuration name="init_rig_multiclamp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,9 +250,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run_test_pulse (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run_test_pulse (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
         <item index="3" class="java.lang.String" itemvalue="Python.init_rig_multiclamp" />
         <item index="4" class="java.lang.String" itemvalue="Python.read_npz_data" />
       </list>
@@ -282,19 +272,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="54" width="1139" height="906" extended-state="1" />
+    <frame x="248" y="-776" width="1040" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39944392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36734694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32858992" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -390,38 +380,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="158" column="32" lean-forward="false" selection-start-line="158" selection-start-column="32" selection-end-line="158" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="106" column="33" lean-forward="true" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        <state relative-caret-position="-340">
+          <caret line="151" column="69" lean-forward="false" selection-start-line="151" selection-start-column="69" selection-end-line="151" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="93">
+          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+        <state relative-caret-position="130">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
           <folding />
         </state>
       </provider>
