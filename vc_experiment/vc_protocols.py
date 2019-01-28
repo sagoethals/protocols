@@ -156,15 +156,15 @@ def Na_activation_with_threshold(amp, model = False, v_rest = 0.*mV):
 def Na_deactivation(amp, model = False):
     if model == False:
         dt = 0.02*ms
-        ntrials=31
+        ntrials=26
         #amplis = linspace(-30,-90, ntrials)*mV
-        amplis = linspace(50, -10, ntrials) * mV
+        amplis = linspace(50, 0, ntrials) * mV
     else:
         dt = 0.01*ms
         ntrials=21
         amplis = linspace(-40,-100, ntrials)*mV
 
-    Vc = 0.*ones(int(140 * ms / dt))*volt
+    Vc = 0.*ones(int(250 * ms / dt))*volt
     t = dt*arange(len(Vc))
     I = []
     Vcs = []
@@ -176,8 +176,8 @@ def Na_deactivation(amp, model = False):
         ampli = amplis[i]
         sleep(1)
         print ampli
-        Vc[int(100 * ms / dt):int(100.02 * ms / dt)] = 40.* mV  #the time depends on the recording temperature, for CGC at RT 200 µs should be OK
-        Vc[int(100.02 * ms / dt):int(120. * ms / dt)] = ampli
+        Vc[int(200 * ms / dt):int(200.1 * ms / dt)] = 40.* mV  #the time depends on the recording temperature, for CGC at RT 200 µs should be OK
+        Vc[int(200.1 * ms / dt):int(220. * ms / dt)] = ampli
         #I.append(amp.acquire('I', V=Vc))
         #Vcs.append(array(Vc))
         Ii = amp.acquire('I', V=Vc)

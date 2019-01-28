@@ -67,8 +67,8 @@ savez(save_path + date + cell + rec + '_Deactivation', Vc=vc_deact[0], I=vc_deac
 show(block=True)
 
 # PLot IV curve 
-start = int(100.03*ms/dt)
-end = int(110.*ms/dt)
+start = int(200.03*ms/dt)
+end = int(210.*ms/dt)
 idx_peaks = []
 i_peaks = []
 v_peaks = []

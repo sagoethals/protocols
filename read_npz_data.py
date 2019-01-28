@@ -33,7 +33,7 @@ dt = 0.02*ms
 #tight_layout
 
  # Na activation
-data_act = load('/media/sarah/storage/Data/Sarah/Patch January 2019/2019.01.25_16.51.01_0101_VC adaptation_5.0.npz')
+data_act = load('/media/sarah/storage/Data/Sarah/Patch January 2019/28.1.2019/2019.01.28_16.04.27_0101_VC adaptation_35.0.npz')
  
 vc = data_act['Vc']
 I = data_act['I']
@@ -89,7 +89,7 @@ xlabel('Time (ms)')
 tight_layout
 
 figure('IV curve')
-plot(vc_peaks, i_peaks, 'o')
-plot(vc_peaks_acc, i_peaks_acc, 'o', color='red')
+plot(array(vc_peaks)-80, i_peaks, 'o')
+plot(array(vc_peaks_acc)-80, i_peaks_acc, 'o', color='red')
 
 show()
