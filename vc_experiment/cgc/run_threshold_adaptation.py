@@ -76,42 +76,42 @@ for vr in vrs:
     
     show(block=True)
     
-    # PLot IV curve for the two techniques
-    start = int(200.40*ms/dt)
-    end = int(219.0*ms/dt)
-    idx_peaks = []
-    i_peaks = []
-    v_peaks = []
-    
-    for i in range(len(vc_act_full[0])): 
-        Is = vc_act_full[1][i] 
-        peak = argmin(Is[start:end]) + start
-        #print peak
-        idx_peaks.append(peak)
-        i_peaks.append(Is[peak])
-        v_peaks.append(vc_act_full[0][i][int(210. * ms / dt)])
-    
-    idx_peaks_dicho = []
-    i_peaks_dicho = []
-    v_peaks_dicho = []
-    
-    for i in range(len(vc_act_full[3][0])): 
-        Is = vc_act_full[3][1][i] 
-        peak = argmin(Is[start:end]) + start
-        #print peak
-        idx_peaks_dicho.append(peak)
-        i_peaks_dicho.append(Is[peak])
-        v_peaks_dicho.append(vc_act_full[3][0][i][int(210. * ms / dt)])
-    
-    figure('IV curve V0=%s' %vr_str)
-    #plot(v_peaks, i_peaks, 'k-')
-    plot(v_peaks, i_peaks, '-o', color='black')
-    plot(v_peaks_dicho, i_peaks_dicho, 'ro')
-    xlabel('V (mV)', fontsize=16)
-    ylabel('Peak I (pA)', fontsize=16)
-    tight_layout()
+    # # PLot IV curve for the two techniques
+    # start = int(200.40*ms/dt)
+    # end = int(219.0*ms/dt)
+    # idx_peaks = []
+    # i_peaks = []
+    # v_peaks = []
+    #
+    # for i in range(len(vc_act_full[0])):
+    #     Is = vc_act_full[1][0][i]
+    #     peak = argmin(Is[start:end]) + start
+    #     #print peak
+    #     idx_peaks.append(peak)
+    #     i_peaks.append(Is[peak])
+    #     v_peaks.append(vc_act_full[0][i][int(210. * ms / dt)])
+    #
+    # idx_peaks_dicho = []
+    # i_peaks_dicho = []
+    # v_peaks_dicho = []
+    #
+    # for i in range(len(vc_act_full[3][0])):
+    #     Is = vc_act_full[3][1][0][i]
+    #     peak = argmin(Is[start:end]) + start
+    #     #print peak
+    #     idx_peaks_dicho.append(peak)
+    #     i_peaks_dicho.append(Is[peak])
+    #     v_peaks_dicho.append(vc_act_full[3][0][i][int(210. * ms / dt)])
+    #
+    # figure('IV curve V0=%s' %vr_str)
+    # #plot(v_peaks, i_peaks, 'k-')
+    # plot(v_peaks, i_peaks, '-o', color='black')
+    # plot(v_peaks_dicho, i_peaks_dicho, 'ro')
+    # xlabel('V (mV)', fontsize=16)
+    # ylabel('Peak I (pA)', fontsize=16)
+    # tight_layout()
       
-    show()
+    #show()
 
     
     

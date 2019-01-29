@@ -65,6 +65,6 @@ for rec in range(nrec):
     sleep(1)
     
     tp = test_pulse(amp, model = model)
-    savez(save_path + date + cell  + rec + '_Test Pulse' , Vc=tp[0], I=tp[1][0], time=tp[2] )
+    savez(save_path + date + cell  + rec + '_Test Pulse' , Vc=tp[0], I=tp[1], time=tp[2] )
    
 show(block=True)

@@ -24,8 +24,6 @@ nA = 1e-9
 pF = 1e-12
 MOhm = 1e6
 
-#dt = 0.02 * ms
-
 def test_pulse(amp, model = False):
 
     sleep(1)
@@ -36,18 +34,21 @@ def test_pulse(amp, model = False):
 
     Vc = 0 * ones(int(40 * ms / dt)) * volt
     I = []
+    Vc_true = []
     Vc[int(10 * ms / dt):int(20 * ms / dt)] = -10 * mV
     Vc[int(20 * ms / dt):int(30 * ms / dt)] = +10 * mV
-    I.append(amp.acquire('I', V=Vc))
+    I.append(amp.acquire('I', 'V', V=Vc))
+    #Vc_true.append(amp.acquire('V', V=Vc))
     t = dt*arange(len(Vc))
     
     figure('Test pulses')
     for Ii in I:
         subplot(211)
-        plot(t/ms, array(Ii) / pA)
+        plot(t/ms, array(Ii[0]) / pA)
         ylabel('I (pA)')
         subplot(212)
-        plot(t/ms, Vc/mV)
+        #plot(t/ms, Vc/mV)
+        plot(t / ms, array(Ii[1]) / mV)
         ylabel('Vc (mV)')
         xlabel('t (ms)')
         pause(0.05)
@@ -83,15 +84,15 @@ def measure_threshold_steps(amp, model = False, v_start = 20*mV, v_range = 4.*mV
         sleep(1) # 1 second between each voltage step
         print ampli
         Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli
-        Ii = amp.acquire('I', V=Vc)
-        I.append(Ii/pA)
+        Ii = amp.acquire('I', 'V', V=Vc)
+        I.append(Ii)
         Vcs.append(array(Vc/mV))
         
         subplot(211)
-        plot(t/ms, array(Ii) / pA)
+        plot(t/ms, array(Ii[0]) / pA)
         ylabel('I (pA)')
         subplot(212)
-        plot(t/ms, array(Vc) / mV)
+        plot(t/ms, array(Ii[1]) / mV)
         ylabel('Vc (mV)')
         xlabel('t (ms)')
         pause(0.05)
@@ -129,16 +130,16 @@ def Na_activation_with_threshold(amp, model = False, v_rest = 0.*mV):
         print ampli
         Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli
         #I.append(amp.acquire('I', V=Vc))
-        Ii = amp.acquire('I', V=Vc)
-        I.append(Ii/pA)
+        Ii = amp.acquire('I', 'V', V=Vc)
+        I.append(Ii)
         Vcs.append(array(Vc/mV))
-        I_peaks.append(min(I[-1][int(200.2 * ms / dt):int(219 * ms / dt)]))
+        I_peaks.append((min(I[0][-1][int(200.2 * ms / dt):int(219 * ms / dt)]))/pA)
         
         subplot(211)
-        plot(t/ms, array(Ii) / pA)
+        plot(t/ms, array(Ii[0]) / pA)
         ylabel('I (pA)')
         subplot(212)
-        plot(t/ms, array(Vc) / mV)
+        plot(t/ms, array(Ii[1]) / mV)
         ylabel('Vc (mV)')
         xlabel('t (ms)')
         pause(0.05)
@@ -180,15 +181,15 @@ def Na_deactivation(amp, model = False):
         Vc[int(200.1 * ms / dt):int(220. * ms / dt)] = ampli
         #I.append(amp.acquire('I', V=Vc))
         #Vcs.append(array(Vc))
-        Ii = amp.acquire('I', V=Vc)
-        I.append(Ii/pA)
+        Ii = amp.acquire('I', 'V', V=Vc)
+        I.append(I)
         Vcs.append(array(Vc/mV))
         
         subplot(211)
-        plot(t/ms, array(Ii) / pA, color = colors[i])
+        plot(t/ms, array(Ii[0]) / pA, color = colors[i])
         ylabel('I (pA)')
         subplot(212)
-        plot(t/ms, array(Vc) / mV, color = colors[i])
+        plot(t/ms, array(Ii[1]) / mV, color = colors[i])
         ylabel('Vc (mV)')
         xlabel('t (ms)')
         pause(0.05)

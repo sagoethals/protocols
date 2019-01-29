@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9e208fe1-09f6-45fd-9063-dbab88688dac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read_npz_data.py" afterPath="$PROJECT_DIR$/read_npz_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" afterPath="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" afterPath="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/vc_protocols.py" afterPath="$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,18 +20,28 @@
       <file leaf-file-name="run_test_pulse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="243">
               <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_threshold_adaptation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_threshold_adaptation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+            <state relative-caret-position="174">
+              <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vc_protocols.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -36,8 +50,8 @@
       <file leaf-file-name="run_na_deactivation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+            <state relative-caret-position="243">
+              <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -69,16 +83,16 @@
         <option value="$PROJECT_DIR$/VC experiment/vc_oscillo.py" />
         <option value="$PROJECT_DIR$/VC experiment/__init__.py" />
         <option value="$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" />
         <option value="$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py" />
-        <option value="$PROJECT_DIR$/read_npz_data.py" />
         <option value="$PROJECT_DIR$/init_rig_multiclamp.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" />
         <option value="$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
+        <option value="$PROJECT_DIR$/read_npz_data.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="248" />
     <option name="y" value="-776" />
     <option name="width" value="1040" />
@@ -99,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,11 +137,30 @@
               <item name="protocols" type="462c0819:PsiDirectoryNode" />
               <item name="vc_experiment" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="clamper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="clamper" type="462c0819:PsiDirectoryNode" />
+              <item name="clamper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="clamper" type="462c0819:PsiDirectoryNode" />
+              <item name="clamper" type="462c0819:PsiDirectoryNode" />
+              <item name="devices" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,9 +284,9 @@
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
         <item index="1" class="java.lang.String" itemvalue="Python.run_test_pulse (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
-        <item index="3" class="java.lang.String" itemvalue="Python.init_rig_multiclamp" />
-        <item index="4" class="java.lang.String" itemvalue="Python.read_npz_data" />
+        <item index="2" class="java.lang.String" itemvalue="Python.read_npz_data" />
+        <item index="3" class="java.lang.String" itemvalue="Python.run_na_deactivation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.init_rig_multiclamp" />
       </list>
     </recent_temporary>
   </component>
@@ -272,19 +304,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="248" y="-776" width="1040" height="744" extended-state="6" />
+    <frame x="248" y="-776" width="1040" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36734694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37551022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -303,7 +335,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/seal-test.py" />
@@ -340,13 +371,6 @@
     <entry file="file://$PROJECT_DIR$/vc_protocols.py" />
     <entry file="file://$PROJECT_DIR$/VC experiment/oscilloscope.py" />
     <entry file="file://$PROJECT_DIR$/acquisition/units.py" />
-    <entry file="file://$PROJECT_DIR$/../clamper/clamper/devices/multiclamp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="208" column="18" lean-forward="true" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VC experiment/vc_oscillo.py" />
     <entry file="file://$PROJECT_DIR$/VC experiment/__init__.py" />
     <entry file="file://$PROJECT_DIR$/signals/__init__.py" />
@@ -359,23 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_npz_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init_rig_multiclamp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#92#113#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../clamper/tools/oscilloscope_VC.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -383,25 +390,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py">
+    <entry file="file://$PROJECT_DIR$/../clamper/clamper/devices/multiclamp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="151" column="69" lean-forward="false" selection-start-line="151" selection-start-column="69" selection-end-line="151" selection-end-column="69" />
+        <state relative-caret-position="-544">
+          <caret line="208" column="18" lean-forward="true" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init_rig_multiclamp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/2019.01.29_13.16.24_0103_Test Pulse.npz">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        <state relative-caret-position="243">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_npz_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="243">
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
@@ -409,8 +440,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+        <state relative-caret-position="174">
+          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
           <folding />
         </state>
       </provider>
