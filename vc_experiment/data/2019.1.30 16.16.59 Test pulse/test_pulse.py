@@ -2,23 +2,25 @@
 A simple voltage clamp script.
 Test pulse to measure the series resistance and cell's properties.
 '''
-# import sys
-# sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+import sys
+sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 # sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+#from clamper import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+#from clamper.brianmodels import *
+#from clamper.data_management import *
+#from clamper.signals import *
 import os
 import shutil
 from time import sleep
 
-#from init_model import *
-from init_rig_multiclamp import *
+from init_model import *
+#from init_rig_multiclamp import *
 
-do_experiment = not os.path.exists('Pulses')
+#do_experiment = not os.path.exists('Pulses')
+
+do_experiment = False
 
 # Parameters
 nrec = 5
@@ -78,28 +80,30 @@ if do_experiment:
               path+'/test_pulse.info')
 
 else: # Loading the data after the experiment
-    from clamper.setup.units import *
+    from setup.units import *
     path = '.'
     I = loadtxt(path+'/Pulses/I.txt')*nA
     V = loadtxt(path + '/Pulses/V.txt')*mV
     Vc = loadtxt(path + '/Pulses/Vc.txt')*mV
 
-    # # Plotting
-    # figure()
-    # t = dt*arange(len(Vc))
-    #
-    # subplot(211)
-    # for Ii in I:
-    #     plot(t/ms, array(Ii[0]) / nA)
-    # xlabel('Time (ms)')
-    # ylabel('Current (nA)')
-    # title('Response to voltage pulses')
-    #
-    # subplot(212)
-    # for Ii in I:
-    #     plot(t/ms, array(Ii[1]) / mV)
-    # xlabel('Time (ms)')
-    # ylabel('V (mV)')
+# Plotting
+
+t = dt*arange(len(Vc))
+
+subplot(211)
+for Ii in I:
+    plot(t/ms, array(Ii) / nA)
+xlabel('Time (ms)')
+ylabel('Current (nA)')
+title('Response to voltage pulses')
+
+#subplot(212)
+#for Ii in I:
+#    plot(t/ms, array(Ii) / mV)
+#xlabel('Time (ms)')
+#ylabel('V (mV)')
+
+show()
 
 
 

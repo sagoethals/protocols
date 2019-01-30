@@ -105,10 +105,8 @@ def threshold_measurement(do_experiment, V0 = 0.*mV):
     print I_peaks
     idx_th = where(array(I_peaks)<=-200.1e-12)[0][0]  #it finds the peak axonal current, units are A
     print idx_th, I_peaks[idx_th]
-    v_threshold = Vc_peaks[idx_th] #V[idx_th - 1][int(210 * ms / dt)]
+    v_threshold = Vc_peaks[idx_th-1] #V[idx_th - 1][int(210 * ms / dt)]
     print 'Rough threshold:', v_threshold
-
-
 
     ### Accurate determination of the threshold
     
