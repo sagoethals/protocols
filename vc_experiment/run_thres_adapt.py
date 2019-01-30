@@ -6,18 +6,9 @@ Created on Tue Jan 29 17:24:53 2019
 @author: sarah
 """
 
-import sys
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
-sys.path.append("/home/sarah/Documents/repositories/protocols/")
-
-#from clamper import *
-from pylab import *
-from brianmodels import *
-from data_management import *
-from signals import *
-import os
-import shutil
-from time import sleep
+# import sys
+# sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+# sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
 from vc_experiment import *
 #from init_model import *

@@ -1,16 +1,16 @@
 '''
 A simple voltage clamp script.
-This one does experiment and analysis in the same script.
+Test pulse to measure the series resistance and cell's properties.
 '''
-import sys
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
-sys.path.append("/home/sarah/Documents/repositories/protocols/")
+# import sys
+# sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
+# sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-#from clamper import *
+from clamper import *
 from pylab import *
-from brianmodels import *
-from data_management import *
-from signals import *
+from clamper.brianmodels import *
+from clamper.data_management import *
+from clamper.signals import *
 import os
 import shutil
 from time import sleep
@@ -21,7 +21,7 @@ from init_rig_multiclamp import *
 do_experiment = not os.path.exists('Pulses')
 
 # Parameters
-nrec = 2
+nrec = 5
 
 ion()
 
@@ -47,7 +47,7 @@ if do_experiment:
                        constant(10*ms, dt)*(-10*mV),
                        constant(10*ms, dt)*10*mV,
                        constant(20*ms, dt)*0*mV])
-        I.append(amplifier.acquire('I', 'V', V=Vc-80*mV)) # !!!!! change that for CGC
+        I.append(amplifier.acquire('I', 'Vext', V=Vc))
         
         t = dt*arange(len(Vc))
         
@@ -65,9 +65,9 @@ if do_experiment:
         pause(0.05)
         
         tight_layout()
-        
-        show(block=True)
-        
+
+    show(block=True)
+
     # Save data
     savetxt(path+'/Pulses/I.txt',array(I[0])/nA)
     savetxt(path+'/Pulses/V.txt',array(I[1])/mV)
@@ -84,22 +84,22 @@ else: # Loading the data after the experiment
     V = loadtxt(path + '/Pulses/V.txt')*mV
     Vc = loadtxt(path + '/Pulses/Vc.txt')*mV
 
-    # Plotting
-    figure()
-    t = dt*arange(len(Vc))
-    
-    subplot(211)
-    for Ii in I:
-        plot(t/ms, array(Ii[0]) / nA)
-    xlabel('Time (ms)')
-    ylabel('Current (nA)')
-    title('Response to voltage pulses')
-    
-    subplot(212)
-    for Ii in I:
-        plot(t/ms, array(Ii[1]) / mV)
-    xlabel('Time (ms)')
-    ylabel('V (mV)')
+    # # Plotting
+    # figure()
+    # t = dt*arange(len(Vc))
+    #
+    # subplot(211)
+    # for Ii in I:
+    #     plot(t/ms, array(Ii[0]) / nA)
+    # xlabel('Time (ms)')
+    # ylabel('Current (nA)')
+    # title('Response to voltage pulses')
+    #
+    # subplot(212)
+    # for Ii in I:
+    #     plot(t/ms, array(Ii[1]) / mV)
+    # xlabel('Time (ms)')
+    # ylabel('V (mV)')
 
 
 
