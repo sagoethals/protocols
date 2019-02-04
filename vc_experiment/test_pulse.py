@@ -47,7 +47,9 @@ if do_experiment:
                        constant(10*ms, dt)*(-10*mV),
                        constant(10*ms, dt)*10*mV,
                        constant(20*ms, dt)*0*mV])
-        I.append(amplifier.acquire('I', 'Vext', V=Vc))
+        Ii = amplifier.acquire('I', 'Vext', V=Vc)
+        I.append(Ii[0])
+        V.append(Ii[1])
         
         t = dt*arange(len(Vc))
         
@@ -69,8 +71,8 @@ if do_experiment:
     show(block=True)
 
     # Save data
-    savetxt(path+'/Pulses/I.txt',array(I[0])/nA)
-    savetxt(path+'/Pulses/V.txt',array(I[1])/mV)
+    savetxt(path+'/Pulses/I.txt',array(I)/nA)
+    savetxt(path+'/Pulses/V.txt',array(V)/mV)
     savetxt(path+'/Pulses/Vc.txt',array(Vc)/mV)
 
     # Save parameter values
