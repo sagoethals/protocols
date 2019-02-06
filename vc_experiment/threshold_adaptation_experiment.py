@@ -53,7 +53,7 @@ def threshold_measurement(do_experiment, V0 = 0.*mV):
         I_peaks = []
         Vc_peaks = []
         V = []
-        for ampli in linspace(10,50,ntrials)*mV:
+        for ampli in linspace(20,60,ntrials)*mV:
             sleep(1)
             print 'Amplitude ', ampli
             Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
@@ -103,7 +103,7 @@ def threshold_measurement(do_experiment, V0 = 0.*mV):
     close('VC steps V0=%s' %v0_label)
 
     print I_peaks
-    idx_th = where(array(I_peaks)<=-200.1e-12)[0][0]  #it finds the peak axonal current, units are A
+    idx_th = where(array(I_peaks)<=-150.1e-12)[0][0]  #it finds the peak axonal current, units are A
     print idx_th, I_peaks[idx_th]
     v_threshold = Vc_peaks[idx_th-1] 
     print 'Rough threshold:', v_threshold
