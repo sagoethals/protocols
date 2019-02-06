@@ -40,6 +40,7 @@ if do_experiment:
     # Experiment
     os.mkdir(path+'/Pulses')
     I = []
+    V = []
     for rec in range(nrec): 
         sleep(1)
         print 'Rec:', rec
@@ -55,13 +56,13 @@ if do_experiment:
         
         # plot data
         subplot(211)
-        plot(t/ms, array(I[rec][0]) / nA)
+        plot(t/ms, array(I[rec]) / nA)
         xlabel('Time (ms)')
         ylabel('Current (nA)')
         #title('Response to voltage pulses')
         
         subplot(212)
-        plot(t/ms, array(I[rec][1]) / mV)
+        plot(t/ms, array(V[rec]) / mV)
         xlabel('Time (ms)')
         ylabel('V (mV)')
         pause(0.05)

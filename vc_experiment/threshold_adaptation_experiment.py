@@ -24,7 +24,7 @@ from init_rig_multiclamp import *
 
 ion()
 
-do_experiment = not os.path.exists('Steps')
+#do_experiment = not os.path.exists('Steps')
 
 def threshold_measurement(do_experiment, V0 = 0.*mV):
 
@@ -53,7 +53,7 @@ def threshold_measurement(do_experiment, V0 = 0.*mV):
         I_peaks = []
         Vc_peaks = []
         V = []
-        for ampli in linspace(20,60,ntrials)*mV:
+        for ampli in linspace(10,50,ntrials)*mV:
             sleep(1)
             print 'Amplitude ', ampli
             Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
@@ -110,7 +110,7 @@ def threshold_measurement(do_experiment, V0 = 0.*mV):
 
     ### Accurate determination of the threshold
     
-    ntrials = 21
+    ntrials = 11
     
     figure('Threshold measurement V0=%s' %v0_label)
     

@@ -2,9 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e208fe1-09f6-45fd-9063-dbab88688dac" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vc_experiment/run_adapt_protocol_PC.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.11.14 Test pulse/Pulses/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.11.14 Test pulse/Pulses/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.11.14 Test pulse/Pulses/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.11.14 Test pulse/test_pulse.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.11.14 Test pulse/test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.13.23 Test pulse/Pulses/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.13.23 Test pulse/Pulses/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.13.23 Test pulse/Pulses/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.13.23 Test pulse/test_pulse.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.13.23 Test pulse/test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.20.38 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.21.35 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.22.5 Voltage clamp 0/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.22.5 Voltage clamp 0/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.22.5 Voltage clamp 0/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.22.5 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.22.5 Voltage clamp 0/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.23.21 Voltage clamp 0/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.23.21 Voltage clamp 0/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.23.21 Voltage clamp 0/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.23.21 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.23.21 Voltage clamp 0/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.51 Voltage clamp 5/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.26.7 Voltage clamp 0/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.43.35 Voltage clamp 0/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.44.24 Voltage clamp 5/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.46.22 Deactivation/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.46.22 Deactivation/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.46.22 Deactivation/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.46.22 Deactivation/deactivation_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.46.22 Deactivation/deactivation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.46.9 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.7.45 Test pulse/Pulses/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.7.45 Test pulse/Pulses/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.7.45 Test pulse/Pulses/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.7.45 Test pulse/test_pulse.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.7.45 Test pulse/test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.9.1 Test pulse/Pulses/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.9.1 Test pulse/Pulses/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.9.1 Test pulse/Pulses/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.9.1 Test pulse/test_pulse.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 11.9.1 Test pulse/test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.16.59 Test pulse/Pulses/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.16.59 Test pulse/Pulses/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.16.59 Test pulse/Pulses/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.16.59 Test pulse/test_pulse.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.16.59 Test pulse/test_pulse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.18.33 Voltage clamp 0/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.19.18 Voltage clamp 5/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.4 Voltage clamp 10/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.20.50 Voltage clamp 15/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.21.32 Voltage clamp 20/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.22.24 Voltage clamp 25/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/small_Steps/I_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/small_Steps/V_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/small_Steps/Vc_th.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/threshold_measurement.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.13 Voltage clamp 30/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.58 Voltage clamp 35/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.58 Voltage clamp 35/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.58 Voltage clamp 35/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.58 Voltage clamp 35/threshold_adaptation_experiment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.23.58 Voltage clamp 35/vc_steps_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.24.37 Deactivation/Steps/I.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.24.37 Deactivation/Steps/V.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.24.37 Deactivation/Steps/Vc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.24.37 Deactivation/deactivation_experiment.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/data/2019.1.30 16.24.37 Deactivation/deactivation_experiment.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" afterPath="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/run_thres_adapt.py" afterPath="$PROJECT_DIR$/vc_experiment/run_thres_adapt.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/test_pulse.py" afterPath="$PROJECT_DIR$/vc_experiment/test_pulse.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/threshold_adaptation_experiment.py" afterPath="$PROJECT_DIR$/vc_experiment/threshold_adaptation_experiment.py" />
     </list>
@@ -20,32 +155,34 @@
       <file leaf-file-name="test_pulse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/test_pulse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_thres_adapt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
               <folding>
-                <element signature="e#262#289#0" expanded="true" />
+                <element signature="e#260#281#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deactivation_experiment.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deactivation_experiment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/deactivation_experiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="526">
+              <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding>
                 <element signature="e#216#237#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_thres_adapt.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#262#289#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,16 +220,17 @@
         <option value="$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
         <option value="$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
         <option value="$PROJECT_DIR$/read_npz_data.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/test_pulse.py" />
         <option value="$PROJECT_DIR$/vc_experiment/run_thres_adapt.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/threshold_adaptation_experiment.py" />
         <option value="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/run_adapt_protocol_PC.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/test_pulse.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/threshold_adaptation_experiment.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="110" />
-    <option name="y" value="-570" />
+    <option name="x" value="156" />
+    <option name="y" value="-580" />
     <option name="width" value="1040" />
     <option name="height" value="744" />
   </component>
@@ -111,8 +249,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,13 +268,6 @@
               <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
               <item name="protocols" type="462c0819:PsiDirectoryNode" />
               <item name="vc_experiment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protocols" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protocols" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="protocols" type="462c0819:PsiDirectoryNode" />
-              <item name="vc_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.deactivation_experiment">
+  <component name="RunManager" selected="Python.run_thres_adapt">
     <configuration name="deactivation_experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,10 +394,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.deactivation_experiment" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run_thres_adapt" />
-        <item index="2" class="java.lang.String" itemvalue="Python.threshold_adaptation_experiment" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_pulse" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run_thres_adapt" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_pulse" />
+        <item index="2" class="java.lang.String" itemvalue="Python.deactivation_experiment" />
+        <item index="3" class="java.lang.String" itemvalue="Python.threshold_adaptation_experiment" />
         <item index="4" class="java.lang.String" itemvalue="Python.run_threshold_adaptation" />
       </list>
     </recent_temporary>
@@ -286,14 +417,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="248" y="-776" width="1040" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38367346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -316,7 +446,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/first_experiment.py" />
@@ -366,21 +495,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/2019.01.29_13.16.24_0103_Test Pulse.npz">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/2019.01.29_13.16.24_0103_Test Pulse.npz" />
+    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_na_deactivation.py" />
     <entry file="file://$PROJECT_DIR$/read_npz_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -388,35 +504,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_threshold_adaptation.py" />
+    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_protocols.py" />
+    <entry file="file://$PROJECT_DIR$/vc_experiment/cgc/run_test_pulse.py" />
     <entry file="file://$PROJECT_DIR$/vc_experiment/old/run_test_pulse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-612">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -424,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3128">
           <caret line="208" column="18" lean-forward="false" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -432,46 +525,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#92#113#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt.py">
+    <entry file="file://$PROJECT_DIR$/vc_experiment/run_adapt_protocol_PC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding>
-            <element signature="e#262#289#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_experiment.py">
+    <entry file="file://$PROJECT_DIR$/vc_experiment/deactivation_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        <state relative-caret-position="526">
+          <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding>
-            <element signature="e#262#283#0" expanded="true" />
+            <element signature="e#216#237#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/test_pulse.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+          <folding>
+            <element signature="e#260#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <caret line="112" column="15" lean-forward="false" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/deactivation_experiment.py">
+    <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="208">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#216#237#0" expanded="true" />
+            <element signature="e#262#289#0" expanded="true" />
           </folding>
         </state>
       </provider>
