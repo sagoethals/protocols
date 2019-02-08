@@ -372,103 +372,103 @@ def repeat_v_step_with_prepulse(amp, model = False, v_step = -60.*mV, v_rest = -
 #        
 #    return Vcs, I, t/ms
 
-#def measure_threshold_dichotomy(amp, model = False, v_start = -60.*mV, v_rest = -80.*mV):
-#    if model == False:
-#        dt = 0.02*ms
-#    else:
-#        dt = 0.1*ms
-#    
-#    Vc = v_rest*ones(int(250 * ms / dt))
-#    t = dt*arange(len(Vc))
-#    I = []
-#    Vcs = []
-#    
-#    # values for the AP model, not adapted to CGC
-#    ampli_min = -80*mV
-#    ampli_current = v_start
-#    ampli_max = -40*mV
-#    spike = False
-#    
-#    vr_label = v_rest/mV                     
-#    figure('Threshold with dichotomy - V0=%s' %vr_label)
-#    
-#    while True:
-#        sleep(1) # 1 second between each voltage step
-#        print ampli_current
-#        Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli_current
-#        #I.append(amp.acquire('I', V=Vc))
-#        Ii = amp.acquire('I', V=Vc)
-#        I.append(Ii/pA)
-#        Vcs.append(array(Vc/mV))
-#        
-#        subplot(211)
-#        plot(t/ms, array(Ii) / pA)
-#        subplot(212)
-#        plot(t/ms, array(Vc) / mV)
-#        pause(0.05)
-#        
-#        i_max = max(abs(Ii[int(200.4 * ms / dt):int(219 * ms / dt)]))
-#        print i_max
-#        
-#        if i_max >= 0.5*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike == False:
-#            print 'stop'
-#            break
-#        if i_max <= 0.5*nA:
-#            ampli_min = ampli_current
-#            spike = False
-#        else: 
-#            ampli_max = ampli_current
-#            spike = True
-#            
-#        ampli_current = 0.5*ampli_max + 0.5*ampli_min
-#        
-#    return Vcs, I, t/ms
+def measure_threshold_dichotomy(amp, model = False, v_start = -60.*mV, v_rest = -80.*mV):
+    if model == False:
+        dt = 0.02*ms
+    else:
+        dt = 0.1*ms
+    
+    Vc = v_rest*ones(int(250 * ms / dt))
+    t = dt*arange(len(Vc))
+    I = []
+    Vcs = []
+    
+    # values for the AP model, not adapted to CGC
+    ampli_min = -80*mV
+    ampli_current = v_start
+    ampli_max = -40*mV
+    spike = False
+    
+    vr_label = v_rest/mV                     
+    figure('Threshold with dichotomy - V0=%s' %vr_label)
+    
+    while True:
+        sleep(1) # 1 second between each voltage step
+        print ampli_current
+        Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli_current
+        #I.append(amp.acquire('I', V=Vc))
+        Ii = amp.acquire('I', V=Vc)
+        I.append(Ii/pA)
+        Vcs.append(array(Vc/mV))
+        
+        subplot(211)
+        plot(t/ms, array(Ii) / pA)
+        subplot(212)
+        plot(t/ms, array(Vc) / mV)
+        pause(0.05)
+        
+        i_max = max(abs(Ii[int(200.4 * ms / dt):int(219 * ms / dt)]))
+        print i_max
+        
+        if i_max >= 0.5*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike == False:
+            print 'stop'
+            break
+        if i_max <= 0.5*nA:
+            ampli_min = ampli_current
+            spike = False
+        else: 
+            ampli_max = ampli_current
+            spike = True
+            
+        ampli_current = 0.5*ampli_max + 0.5*ampli_min
+        
+    return Vcs, I, t/ms
 
 
-#def voltage_clamp_acti_with_dicho(amp, model = False, v_rest = -80.*mV):
-#    if model == False:
-#        dt = 0.02*ms
-#        ntrials=21
-#        amplis = linspace(-60,-20, ntrials)*mV
-#    else:
-#        dt = 0.1*ms
-#        ntrials=31
-#        amplis = linspace(-80,-20, ntrials)*mV
-#        
-#    Vc = v_rest * ones(int(250 * ms / dt))
-#    t = dt*arange(len(Vc))
-#    I = []
-#    Vcs = []
-#    I_peaks = []
-#                         
-#    vr_label = v_rest/mV
-#    figure('VC - activation - V0=%s' %vr_label)
-#    for ampli in amplis:
-#        sleep(1) # 1 second between each voltage step
-#        print ampli
-#        Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli
-#        #I.append(amp.acquire('I', V=Vc))
-#        Ii = amp.acquire('I', V=Vc)
-#        I.append(Ii/pA)
-#        Vcs.append(array(Vc/mV))
-#        I_peaks.append(min(I[-1][int(200.4 * ms / dt):int(219 * ms / dt)]))
-#        
-#        subplot(211)
-#        plot(t/ms, array(Ii) / pA)
-#        subplot(212)
-#        plot(t/ms, array(Vc) / mV)
-#        pause(0.05)
-#    
-#    print I_peaks
-#    idx_th = where(array(I_peaks)<=-500.)[0][0]  #it finds the peak axonal current
-#    print idx_th, I_peaks[idx_th]
-#    v_threshold = Vcs[idx_th - 1][int(210 * ms / dt)] * mV
-#    print 'Rough threshold:', v_threshold
-#    
-#    # dichotomy method
-#    data_threshold = measure_threshold_dichotomy(amp, model = model, v_start = v_threshold, v_rest = v_rest)
-#
-#    return Vcs, I, t/ms, data_threshold
+def voltage_clamp_acti_with_dicho(amp, model = False, v_rest = -80.*mV):
+    if model == False:
+        dt = 0.02*ms
+        ntrials=21
+        amplis = linspace(-60,-20, ntrials)*mV
+    else:
+        dt = 0.1*ms
+        ntrials=31
+        amplis = linspace(-80,-20, ntrials)*mV
+        
+    Vc = v_rest * ones(int(250 * ms / dt))
+    t = dt*arange(len(Vc))
+    I = []
+    Vcs = []
+    I_peaks = []
+                         
+    vr_label = v_rest/mV
+    figure('VC - activation - V0=%s' %vr_label)
+    for ampli in amplis:
+        sleep(1) # 1 second between each voltage step
+        print ampli
+        Vc[int(200 * ms / dt):int(220 * ms / dt)] = ampli
+        #I.append(amp.acquire('I', V=Vc))
+        Ii = amp.acquire('I', V=Vc)
+        I.append(Ii/pA)
+        Vcs.append(array(Vc/mV))
+        I_peaks.append(min(I[-1][int(200.4 * ms / dt):int(219 * ms / dt)]))
+        
+        subplot(211)
+        plot(t/ms, array(Ii) / pA)
+        subplot(212)
+        plot(t/ms, array(Vc) / mV)
+        pause(0.05)
+    
+    print I_peaks
+    idx_th = where(array(I_peaks)<=-500.)[0][0]  #it finds the peak axonal current
+    print idx_th, I_peaks[idx_th]
+    v_threshold = Vcs[idx_th - 1][int(210 * ms / dt)] * mV
+    print 'Rough threshold:', v_threshold
+    
+    # dichotomy method
+    data_threshold = measure_threshold_dichotomy(amp, model = model, v_start = v_threshold, v_rest = v_rest)
+
+    return Vcs, I, t/ms, data_threshold
 
 
 

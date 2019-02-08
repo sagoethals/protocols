@@ -13,7 +13,7 @@ sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 #from devices import *
 from pylab import *
 from brianmodels import *
-from protocols import *
+from protocols.vc_experiment.old import *
 
 from datetime import datetime
 from time import sleep
