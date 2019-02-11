@@ -40,7 +40,7 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
         os.mkdir(path)
         
         # Saving current script
-        shutil.copy('threshold_adaptation_dichotomy_experiment.py', path)
+        shutil.copy('threshold_adaptation_dicho_experiment.py', path)
     
         # Experiment
         os.mkdir(path+'/Steps')

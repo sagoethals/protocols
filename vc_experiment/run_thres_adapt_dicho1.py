@@ -3,7 +3,8 @@
 Exp
 """
 
-from vc_exp_dicho import *
+#from vc_exp_dicho import *
+from vc_experiment import *
 from init_rig_multiclamp import *
 
 do_experiment = not os.path.exists('Steps')
