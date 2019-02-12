@@ -18,12 +18,12 @@ from time import sleep
 #from init_model import *
 from init_rig_multiclamp import *
 
-do_experiment = not os.path.exists('Pulses')
+do_experiment = False #os.path.exists('Pulses')
 
 # Parameters
 nrec = 5
 
-ion()
+#ion()
 
 figure('Test pulse')
 
@@ -33,7 +33,7 @@ if do_experiment:
         os.mkdir('data')
     path = 'data/'+ date_time()+' Test pulse'
     os.mkdir(path)
-    
+
     # Saving current script
     shutil.copy('test_pulse.py', path)
 
@@ -41,7 +41,7 @@ if do_experiment:
     os.mkdir(path+'/Pulses')
     I = []
     V = []
-    for rec in range(nrec): 
+    for rec in range(nrec):
         sleep(1)
         print 'Rec:', rec
         Vc = sequence([constant(20*ms, dt)*0*mV,
@@ -51,22 +51,22 @@ if do_experiment:
         Ii = amplifier.acquire('I', 'Vext', V=Vc)
         I.append(Ii[0])
         V.append(Ii[1])
-        
+
         t = dt*arange(len(Vc))
-        
+
         # plot data
         subplot(211)
         plot(t/ms, array(I[rec]) / nA)
         xlabel('Time (ms)')
         ylabel('Current (nA)')
         #title('Response to voltage pulses')
-        
+
         subplot(212)
         plot(t/ms, array(V[rec]) / mV)
         xlabel('Time (ms)')
         ylabel('V (mV)')
         pause(0.05)
-        
+
         tight_layout()
 
     show(block=True)
@@ -87,24 +87,22 @@ else: # Loading the data after the experiment
     V = loadtxt(path + '/Pulses/V.txt')*mV
     Vc = loadtxt(path + '/Pulses/Vc.txt')*mV
 
-    # # Plotting
-    # figure()
-    # t = dt*arange(len(Vc))
-    #
-    # subplot(211)
-    # for Ii in I:
-    #     plot(t/ms, array(Ii[0]) / nA)
-    # xlabel('Time (ms)')
-    # ylabel('Current (nA)')
-    # title('Response to voltage pulses')
-    #
-    # subplot(212)
-    # for Ii in I:
-    #     plot(t/ms, array(Ii[1]) / mV)
-    # xlabel('Time (ms)')
-    # ylabel('V (mV)')
+    # Plotting
+    t = dt*arange(len(Vc))
 
+    subplot(211)
+    for Ii in I:
+        plot(t/ms, array(Ii) / nA)
+    xlabel('Time (ms)')
+    ylabel('Current (nA)')
+    title('Response to voltage pulses')
 
+    subplot(212)
+    plot(t/ms, array(Vc) / mV)
+    xlabel('Time (ms)')
+    ylabel('V (mV)')
+
+show()
 
 
 
