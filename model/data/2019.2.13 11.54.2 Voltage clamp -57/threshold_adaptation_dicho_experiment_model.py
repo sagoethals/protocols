@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
 """
 Fine measure of the threshold with the dichotomy method.
 """
@@ -8,20 +9,36 @@ import sys
 sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
 #sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+## to run on the rig:
+#from clamper import *
+#from pylab import *
+#from clamper.brianmodels import *
+#from clamper.data_management import *
+#from clamper.signals import *
+#import os
+#import shutil
+#from time import sleep
+#
+#from init_rig_multiclamp import *
+
+# to run with the model:
+#from clamper import *
+from brian2 import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+from brianmodels import *
+from data_management import *
+from signals import *
 import os
 import shutil
 from time import sleep
 
-from init_rig_multiclamp import *
+from init_model import *
 
 ion()
 
-def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
+#do_experiment = not os.path.exists('Steps')
+
+def threshold_measurement_dicho_model(do_experiment, V0 = 0.*mV):
 
     ### Look for the rough threshold
     print 'V0:', V0
@@ -40,7 +57,7 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
         os.mkdir(path)
         
         # Saving current script
-        shutil.copy('threshold_adaptation_dicho_experiment.py', path)
+        shutil.copy('threshold_adaptation_dicho_experiment_model.py', path)
     
         # Experiment
         os.mkdir(path+'/Steps')
@@ -48,17 +65,19 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
         I_peaks = []
         Vc_peaks = []
         V = []
-        for ampli in linspace(20,60,ntrials)*mV: # CGC
+        #for ampli in linspace(20,60,ntrials)*mV: # CGC
+        for ampli in linspace(-80,-40,ntrials)*mV:
             sleep(1)
             print 'Amplitude ', ampli
             Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
                            constant(20*ms, dt)*ampli,
-                           constant(20*ms, dt)*0*mV])
+                           constant(20*ms, dt)*V0]) #0*mV])
             Ii = amplifier.acquire('I', 'Vext', V=Vc)
             I.append(Ii[0])
             V.append(Ii[1])
             
-            I_peaks.append(min(I[-1][int(200.3 * ms / dt):int(219 * ms / dt)]))
+            I_peaks.append(min(I[-1][int(200.2 * ms / dt):int(219 * ms / dt)]))
+            print I_peaks[-1]
             Vc_peaks.append(Vc[int(210*ms/dt)])
             
             # Plotting
@@ -95,17 +114,14 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
         V = loadtxt(path+'/Steps/V.txt')*mV
         Vc = loadtxt(path + '/Steps/Vc.txt')*mV
 
+    #close('VC steps V0=%s' %v0_label)
 
     print I_peaks
-#    idx_th = where(array(I_peaks)<=-150.1e-12)[0][0]  #it finds the peak axonal current, units are A
-#    print idx_th, I_peaks[idx_th]
-#    v_threshold = Vc_peaks[idx_th-1] 
-#    print 'Rough threshold:', v_threshold
     
-    idx_th = where(array(I_peaks)<=-150.1e-12)[0]  #it finds the peak axonal current, units are A
-    
+    idx_th = where(array(I_peaks)<=-2000.1e-12)[0]  #it finds the peak axonal current, units are A
     if size(idx_th) == 0:
         print 'Too small current'
+        #break
     else:
         idx_th = idx_th[0]
         print idx_th, I_peaks[idx_th]
@@ -126,6 +142,7 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
             I = []
             V = []
                 
+            # values for the AP model, not adapted to CGC
             ampli_min =  v_threshold - 4.*mV #-80*mV
             ampli_current = v_threshold
             ampli_max = v_threshold + 4.*mV # -30*mV
@@ -136,10 +153,9 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
             while True:
                 sleep(1) # 1 second between each voltage step
                 print n_it, ampli_current
-                
                 Vc_th = sequence([constant(200*ms, dt)*V0, #0*mV,
                                constant(20*ms, dt)*ampli_current,
-                               constant(20*ms, dt)*0*mV])
+                               constant(20*ms, dt)*V0]) #0*mV])
                 Ii = amplifier.acquire('I', 'Vext', V=Vc_th)
                 I.append(Ii[0])
                 V.append(Ii[1])
@@ -149,6 +165,7 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
                 
                 subplot(211)
                 plot(t/ms, array(Ii)[0] / nA)
+                #xlabel('Time (ms)')
                 ylabel('Current (nA)')
                 #title('Response to voltage pulses')
                 
@@ -161,16 +178,16 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
                 tight_layout()
                     
                 # finding the peak
-                i_max = max(abs(Ii[0][int(200.3 * ms / dt):int(219 * ms / dt)]))
-                #print i_max
+                i_max = max(abs(Ii[0][int(200.2 * ms / dt):int(219 * ms / dt)]))
+                print i_max
                 
                 if n_it > 20:
                     print 'too much iterations'
                     break
-                if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.05*mV and spike == False:
+                if i_max >= 2.*nA and abs(ampli_current - ampli_min) <= 0.2*mV and spike == False:
                     print 'stop'
                     break
-                if i_max <= 0.15*nA:
+                if i_max <= 2.*nA:
                     ampli_min = ampli_current
                     spike = False
                 else: 
