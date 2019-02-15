@@ -97,11 +97,6 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
 
 
     print I_peaks
-#    idx_th = where(array(I_peaks)<=-150.1e-12)[0][0]  #it finds the peak axonal current, units are A
-#    print idx_th, I_peaks[idx_th]
-#    v_threshold = Vc_peaks[idx_th-1] 
-#    print 'Rough threshold:', v_threshold
-    
     idx_th = where(array(I_peaks)<=-150.1e-12)[0]  #it finds the peak axonal current, units are A
     
     if size(idx_th) == 0:
@@ -126,9 +121,9 @@ def threshold_measurement_dicho(do_experiment, V0 = 0.*mV):
             I = []
             V = []
                 
-            ampli_min =  v_threshold - 4.*mV #-80*mV
+            ampli_min =  v_threshold - 8.*mV #-80*mV
             ampli_current = v_threshold
-            ampli_max = v_threshold + 4.*mV # -30*mV
+            ampli_max = v_threshold + 8.*mV # -30*mV
             spike = False
             
             n_it = 0
