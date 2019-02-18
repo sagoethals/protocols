@@ -1,6 +1,6 @@
 
 """
-Fine measure of the threshold with the dichotomy method.
+Fine measure of the threshold with first large voltage steps and second the dichotomy method.
 """
 
 
