@@ -21,4 +21,5 @@ V0s = linspace(0., 35., n_exp) * mV
 
 for V0 in V0s:
     V0 = V0 - 75*mV # for model!
-    threshold_measurement_dicho_model(do_experiment, V0)
+    #threshold_measurement_dicho_model(do_experiment, V0)
+    threshold_measurement_ASA_model(do_experiment, V0)

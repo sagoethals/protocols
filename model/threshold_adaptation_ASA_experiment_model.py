@@ -1,6 +1,14 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
+Created on Tue Feb 26 08:17:23 2019
+
+@author: sarah
+"""
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
 Fine measure of the threshold with the dichotomy method.
 """
 
@@ -38,7 +46,7 @@ ion()
 
 #do_experiment = not os.path.exists('Steps')
 
-def threshold_measurement_dicho_model(do_experiment, V0 = 0.*mV):
+def threshold_measurement_ASA_model(do_experiment, V0 = 0.*mV):
 
     ### Look for the rough threshold
     print 'V0:', V0
@@ -140,18 +148,15 @@ def threshold_measurement_dicho_model(do_experiment, V0 = 0.*mV):
             # Experiment
             os.mkdir(path+'/small_Steps')
             I = []
-            V = []
-                
-            # values for the AP model, not adapted to CGC
-            ampli_min =  v_threshold - 4.*mV #-80*mV
-            ampli_current = v_threshold
-            ampli_max = v_threshold + 4.*mV # -30*mV
-            spike = False
+            V = []        
             
-            n_it = 0
-                                          
-            while True:
-                sleep(1) # 1 second between each voltage step
+            # ASA method
+            ampli_range =  8.*mV #-80*mV
+            ampli_current = v_threshold
+            spike = 0
+                            
+            for n_it in range(1, 11):
+                sleep(1) 
                 print n_it, ampli_current
                 Vc_th = sequence([constant(200*ms, dt)*V0, #0*mV,
                                constant(20*ms, dt)*ampli_current,
@@ -176,30 +181,23 @@ def threshold_measurement_dicho_model(do_experiment, V0 = 0.*mV):
                 pause(0.05)
                 
                 tight_layout()
-                    
+                
                 # finding the peak
                 i_max = max(abs(Ii[0][int(200.2 * ms / dt):int(219 * ms / dt)]))
-                print i_max
+                print i_max, amplis[-1]
                 
-                if n_it > 20:
-                    print 'too much iterations'
-                    break
-                if i_max >= 2.*nA and abs(ampli_current - ampli_min) <= 0.2*mV and spike == False:
-                    print 'stop'
-                    break
                 if i_max <= 2.*nA:
-                    ampli_min = ampli_current
-                    spike = False
+                    spike = 0
                 else: 
-                    ampli_max = ampli_current
-                    spike = True
-                        
-                ampli_current = 0.5*ampli_max + 0.5*ampli_min
+                    spike = 1
                 
-                n_it += 1
-                
+                if n_it < 3:
+                    ampli_current = ampli_current - ampli_range/n_it * (spike - 0.5)
+                else:
+                    ampli_current = ampli_current - ampli_range/(2 + n_it) * (spike - 0.5)
+            
             show(block=True)
-        
+            
             # Save data
             savetxt(path+'/small_Steps/I_th.txt', array(I)/nA)
             savetxt(path+'/small_Steps/V_th.txt', array(V)/mV)
