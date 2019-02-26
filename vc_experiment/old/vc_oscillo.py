@@ -1,3 +1,5 @@
+
+
 '''
 An oscilloscope showing the current response to a pulse
 '''
@@ -14,9 +16,9 @@ swap = False # Swap the two electrodes
 
 V0 = 1*mV  # This will be scaled with a factor later, assuming that the sequence
            # contains only 0 or V0!
-T0 = 30*ms
+T0 = 50*ms
 T1 = 20*ms
-T2 = 30*ms
+T2 = 50*ms
 Vc = sequence([constant(T0, dt) * 0 * mV,
                constant(T1, dt) * V0,
                constant(T2, dt) * 0 * mV])

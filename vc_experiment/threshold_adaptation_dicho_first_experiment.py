@@ -5,13 +5,12 @@ Fine measure of the threshold with first the dichotomy method and second small v
 """
 
 
-import sys
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
+#import sys
+#sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
 #sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
 from clamper import *
 from pylab import *
-from clamper.brianmodels import *
 from clamper.data_management import *
 from clamper.signals import *
 import os
@@ -47,8 +46,8 @@ def threshold_measurement_dicho_first(do_experiment, V0 = 0.*mV):
         I_peaks = []
         Vc_peaks = []
             
-        ampli_min = 20.*mV
-        ampli_current = 40.*mV
+        ampli_min = 0.*mV
+        ampli_current = 30.*mV
         ampli_max = 60.*mV
         spike = False
         
@@ -65,8 +64,8 @@ def threshold_measurement_dicho_first(do_experiment, V0 = 0.*mV):
             I.append(Ii[0])
             V.append(Ii[1])
             
-            I_peaks.append(min(I[-1][int(200.3 * ms / dt):int(219 * ms / dt)]))
-            Vc_peaks.append(Vc[int(210*ms/dt)])
+            #I_peaks.append(min(I[-1][int(200.15 * ms / dt):int(219 * ms / dt)]))
+            #Vc_peaks.append(Vc[int(210*ms/dt)])
             
             # Plotting
             t = dt*arange(len(Vc))
@@ -85,13 +84,14 @@ def threshold_measurement_dicho_first(do_experiment, V0 = 0.*mV):
             tight_layout()
                 
             # finding the peak
-            i_max = max(abs(Ii[0][int(200.3 * ms / dt):int(219 * ms / dt)]))
+            i_max = max(abs(Ii[0][int(200.15 * ms / dt):int(219 * ms / dt)]))
             #print i_max
             
             if n_it > 15:
                 print 'too much iterations'
                 break
-            if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike == False:
+            if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
+                # !!! this finds the voltage at the peak axonal current
                 print 'stop'
                 break
             if i_max <= 0.15*nA:
@@ -111,12 +111,8 @@ def threshold_measurement_dicho_first(do_experiment, V0 = 0.*mV):
         savetxt(path+'/Steps/I_th.txt', array(I)/nA)
         savetxt(path+'/Steps/V_th.txt', array(V)/mV)
         savetxt(path+'/Steps/Vc_th.txt', array(Vc)/mV)
-    
-        ## Save parameter values
-        #save_info(dict(amplitude=ampli/mV, duration=len(Vc)*dt/ms, dt=dt/ms),
-                  #path+'/threshold_measurement_dicho_first.info')
 
-    v_threshold = ampli_current
+    v_threshold = ampli_current - 0.5*mV
     print 'threshold:', v_threshold
 
     ntrials = 11

@@ -9,9 +9,7 @@ import sys
 sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
 #sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
 from pylab import *
-from clamper.brianmodels import *
 from clamper.data_management import *
 from clamper.signals import *
 import os
@@ -22,7 +20,7 @@ from init_rig_multiclamp import *
 
 ion()
 
-def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
+def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
 
     ### Look for the rough threshold
     print 'V0:', V0
@@ -55,12 +53,12 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
         n_it = 0
                                       
         while True:
-            sleep(1) # 1 second between each voltage step
+            sleep(1)
             print n_it, ampli_current/mV
             
             Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
                            constant(20*ms, dt)*ampli_current,
-                           constant(20*ms, dt)*0*mV])
+                           constant(20 * ms, dt) * 0 * mV])
             Ii = amplifier.acquire('I', 'Vext', V=Vc)
             I.append(Ii[0])
             V.append(Ii[1])
@@ -91,22 +89,16 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
             if n_it > 15:
                 print 'too much iterations'
                 break
-            #if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike == False:
-            if i_max <= 0.15*nA and abs(ampli_current - ampli_min) <= 1.*mV and spike == True:
-                print 'stop'
+            if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
+                # finds the peak axonal current
+                print ' stop '
                 break
-            if i_max > 0.15*nA:
-                ampli_max = ampli_current
-                spike = True
-            else: 
+            if i_max <= 0.15*nA:
                 ampli_min = ampli_current
                 spike = False
-#            if i_max <= 0.15*nA:
-#                ampli_min = ampli_current
-#                spike = False
-#            else: 
-#                ampli_max = ampli_current
-#                spike = True
+            else:
+                ampli_max = ampli_current
+                spike = True
                     
             ampli_current = 0.5*ampli_max + 0.5*ampli_min
             
@@ -118,15 +110,9 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
         savetxt(path+'/Steps/I_th.txt', array(I)/nA)
         savetxt(path+'/Steps/V_th.txt', array(V)/mV)
         savetxt(path+'/Steps/Vc_th.txt', array(Vc)/mV)
-    
-        ## Save parameter values
-        #save_info(dict(amplitude=ampli/mV, duration=len(Vc)*dt/ms, dt=dt/ms),
-                  #path+'/threshold_measurement_dicho_first.info')
 
-    v_threshold = ampli_current
-    print 'threshold:', v_threshold
-
-    #ntrials = 11
+    v_threshold = ampli_current - 0.5 * mV
+    print 'threshold:', v_threshold/mV, 'mV'
 
     figure('VC steps V0=%s' %v0_label)
 
@@ -141,17 +127,17 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
         V = []
 
         # ASA method
-        ampli_range =  2.*mV #-80*mV
+        ampli_range = 4.*mV
         ampli_current = v_threshold
         spike = 0
-                                      
-        for n_it in range(1, 11):
+
+        for n_it in range(1, 9):
             sleep(1) 
-            print n_it, ampli_current
+            print n_it, ampli_current/mV
             
             Vc_th = sequence([constant(200*ms, dt)*V0, #0*mV,
-                           constant(20*ms, dt)*ampli_current,
-                           constant(20*ms, dt)*-75*mV])
+                            constant(20*ms, dt)*ampli_current,
+                            constant(20 * ms, dt) * 0 * mV])
     
             Ii = amplifier.acquire('I', 'Vext', V=Vc_th)
             I.append(Ii[0])
@@ -162,9 +148,7 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
             
             subplot(211)
             plot(t/ms, array(Ii)[0] / nA)
-            #xlabel('Time (ms)')
             ylabel('Current (nA)')
-            #title('Response to voltage pulses')
             
             subplot(212)
             plot(t/ms, array(Ii)[1] / mV)
@@ -176,7 +160,7 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
             
             # finding the peak
             i_max = max(abs(Ii[0][int(200.15 * ms / dt):int(219 * ms / dt)]))
-            print i_max
+            print 'peak current:', i_max/ nA, 'nA'
             
             if i_max <= 0.15*nA:
                 spike = 0
@@ -195,9 +179,6 @@ def threshold_measurement_ASA(do_experiment, V0 = 0.*mV):
         savetxt(path+'/small_Steps/V.txt', array(V)/mV)
         savetxt(path+'/small_Steps/Vc.txt', array(Vc_th)/mV)
 
-        # Save parameter values
-        save_info(dict(amplitude=ampli/mV, duration=len(Vc_th)*dt/ms, dt=dt/ms),
-                  path+'/vc_steps_experiment.info')
 
         
     

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e208fe1-09f6-45fd-9063-dbab88688dac" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vc_experiment/old/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vc_experiment/old/vc_oscillo.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vc_experiment/vc_oscillo.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" afterPath="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/oscilloscope_VC.py" afterPath="$PROJECT_DIR$/vc_experiment/oscilloscope_VC.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho1.py" afterPath="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho2.py" afterPath="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/threshold_adaptation_ASA_experiment.py" afterPath="$PROJECT_DIR$/vc_experiment/threshold_adaptation_ASA_experiment.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py" afterPath="$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vc_experiment/vc_ramp.py" afterPath="$PROJECT_DIR$/vc_experiment/vc_ramp.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,38 +24,8 @@
       <file leaf-file-name="test_pulse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/test_pulse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
+            <state relative-caret-position="68">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deactivation_experiment.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vc_experiment/deactivation_experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vc_ramp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vc_experiment/vc_ramp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threshold_adaptation_dicho_first_experiment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="112" column="47" lean-forward="false" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -59,19 +34,33 @@
       <file leaf-file-name="run_thres_adapt_dicho1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#42#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threshold_adaptation_ASA_experiment.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_ASA_experiment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="129" column="23" lean-forward="false" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_thres_adapt_dicho2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho2.py">
+      <file leaf-file-name="threshold_adaptation_dicho_first_experiment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="-137">
+              <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+              <folding>
+                <element signature="e#256#277#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,20 +104,23 @@
         <option value="$PROJECT_DIR$/vc_experiment/run_thres_adapt1.py" />
         <option value="$PROJECT_DIR$/vc_experiment/run_thres_adapt2.py" />
         <option value="$PROJECT_DIR$/vc_experiment/data/2019.2.11 14.34.33 Test pulse/test_pulse.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho2.py" />
         <option value="$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_experiment.py" />
         <option value="$PROJECT_DIR$/vc_experiment/vc_ramp.py" />
         <option value="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" />
-        <option value="$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/vc_oscillo.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/oscilloscope_VC.py" />
         <option value="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho1.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho2.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py" />
+        <option value="$PROJECT_DIR$/vc_experiment/threshold_adaptation_ASA_experiment.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="248" />
-    <option name="y" value="-776" />
-    <option name="width" value="1040" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -145,7 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,6 +160,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,12 +168,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../clamper" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Romain\PycharmProjects\protocols\vc_experiment\old" />
+      <recent name="C:\Users\Romain\PycharmProjects\protocols\" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Romain\PycharmProjects\protocols\vc_experiment" />
       <recent name="C:\Users\Romain\PycharmProjects\protocols" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Romain\PycharmProjects\protocols\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,8 +189,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.deactivation_experiment">
-    <configuration name="deactivation_experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.run_thres_adapt_dicho1">
+    <configuration name="oscilloscope_VC" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -209,7 +202,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="protocols" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vc_experiment/deactivation_experiment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vc_experiment/oscilloscope_VC.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,7 +258,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="vc_ramp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="vc_oscillo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -277,25 +270,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="protocols" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vc_experiment/vc_ramp.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Romain\PycharmProjects\protocols\vc_experiment\old\vc_oscillo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test_pulse" />
-      <item index="1" class="java.lang.String" itemvalue="Python.deactivation_experiment" />
-      <item index="2" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho1" />
-      <item index="3" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.vc_ramp" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.vc_oscillo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.oscilloscope_VC" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.deactivation_experiment" />
-        <item index="1" class="java.lang.String" itemvalue="Python.vc_ramp" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_pulse" />
-        <item index="4" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_pulse" />
+        <item index="2" class="java.lang.String" itemvalue="Python.oscilloscope_VC" />
+        <item index="3" class="java.lang.String" itemvalue="Python.vc_oscillo" />
+        <item index="4" class="java.lang.String" itemvalue="Python.run_thres_adapt_dicho2" />
       </list>
     </recent_temporary>
   </component>
@@ -313,13 +306,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="248" y="-776" width="1040" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3244898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24433658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.299509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183391" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39116204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -346,7 +339,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/first_experiment.py" />
     <entry file="file://$PROJECT_DIR$/protocols.py" />
     <entry file="file://$PROJECT_DIR$/first_experiment.py" />
@@ -370,13 +362,6 @@
     <entry file="file://$PROJECT_DIR$/signals/__init__.py" />
     <entry file="file://$PROJECT_DIR$/acquisition/__init__.py" />
     <entry file="file://$PROJECT_DIR$/CGC VC experiment/run_test_pulse.py" />
-    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_oscillo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../clamper/tools/oscilloscope_VC.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -439,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -453,18 +431,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/oscilloscope_VC.py">
+    <entry file="file://$PROJECT_DIR$/vc_experiment/data/2019.2.11 15.14.41 Voltage clamp 0/threshold_adaptation_dicho_experiment.py" />
+    <entry file="file://$PROJECT_DIR$/vc_experiment/data/2019.2.11 14.34.33 Test pulse/test_pulse.py" />
+    <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="366">
+          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/data/2019.2.11 15.14.41 Voltage clamp 0/threshold_adaptation_dicho_experiment.py" />
-    <entry file="file://$PROJECT_DIR$/vc_experiment/data/2019.2.11 14.34.33 Test pulse/test_pulse.py" />
+    <entry file="file://$PROJECT_DIR$/vc_experiment/old/vc_oscillo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/deactivation_experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_ramp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_experiment/oscilloscope_VC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-489">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/test_pulse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="68">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
@@ -472,48 +488,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+        <state relative-caret-position="289">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/run_thres_adapt_dicho1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/vc_ramp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#42#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_dicho_first_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="112" column="47" lean-forward="false" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="-137">
+          <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding>
+            <element signature="e#256#277#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_experiment/deactivation_experiment.py">
+    <entry file="file://$PROJECT_DIR$/vc_experiment/threshold_adaptation_ASA_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="357">
+          <caret line="129" column="23" lean-forward="false" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
           <folding />
         </state>
       </provider>
