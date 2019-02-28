@@ -43,8 +43,8 @@ def threshold_measurement_dicho_first(do_experiment, V0 = 0.*mV):
         os.mkdir(path+'/Steps')
         I = []
         V = []
-        I_peaks = []
-        Vc_peaks = []
+        # I_peaks = []
+        # Vc_peaks = []
             
         ampli_min = 0.*mV
         ampli_current = 30.*mV

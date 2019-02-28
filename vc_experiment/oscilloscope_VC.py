@@ -21,7 +21,7 @@ Vc = sequence([constant(T0, dt) * 0 * mV,
                constant(T1, dt) * V0,
                constant(T2, dt) * 0 * mV])
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(8, 3))
 plt.subplots_adjust(bottom=0.2)
 plt.xlabel('Time (ms)')
 plt.ylabel('I (pA)')
@@ -35,7 +35,8 @@ line, = plot(t/ms, 0*t/ms)
 
 def adjust_callback(event):
     y = line.get_ydata()
-    ax.set_ylim(1.05*min(y), 1.05*max(y))
+    #ax.set_ylim(1.05*min(y), 1.05*max(y))
+    ax.set_ylim(10 * min(y), 10 * max(y))
 
 
 def autoadjust_callback(event):
@@ -56,7 +57,6 @@ def value_callback(text):
     except (TypeError, ValueError) as ex:
         # Not a parseable number
         print('Invalid value: {} !'.format(text))
-
 
 def selection_callback(event):
     global factor
@@ -91,7 +91,7 @@ def update(i):
         I0 = median(I[:int(T0/dt)]) # calculated on initial pause
         Ipeak = median(I[int((T0+2*T1/3.)/dt):int((T0+T1)/dt)]) # calculated on last third of the pulse
         R = V0/(Ipeak-I0)
-        resistance_text.set_text('{:.1f} MOhm'.format(R / Mohm))
+        resistance_text.set_text('{:.3f} MOhm'.format(R / Mohm))
     else:
         resistance_text.set_text('[no clamp]')
     # Plot
