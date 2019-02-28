@@ -1,7 +1,7 @@
 
 
 """
-CGC:
+PC:
 Fine measure of the threshold with first the dichotomy method and second a staircase procedure.
 """
 
@@ -21,7 +21,7 @@ from init_rig_multiclamp import *
 
 ion()
 
-def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
+def threshold_measurement_experiment_PC(do_experiment, V0 = 0.*mV):
 
     ### Look for the rough threshold
     print 'V0:', V0
@@ -33,18 +33,18 @@ def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
         # Make a data folder
         if not os.path.exists('data'):
             os.mkdir('data')
-        path = 'data/'+date_time()+' Voltage clamp %i' %v0_label
+        path = 'data/'+date_time()+' Voltage clamp PC %i' %v0_label
         os.mkdir(path)
         
         # Saving current script
-        shutil.copy('threshold_adaptation_dicho_first_experiment.py', path)
+        shutil.copy('threshold_adaptation_ASA_PC.py', path)
     
         # Experiment
         os.mkdir(path+'/Steps')
         I = []
         V = []
-        I_peaks = []
-        Vc_peaks = []
+#        I_peaks = []
+#        Vc_peaks = []
             
         ampli_min = 0.*mV
         ampli_current = 30.*mV
@@ -58,14 +58,14 @@ def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
             print n_it, ampli_current/mV
             
             Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
-                           constant(20*ms, dt)*ampli_current,
+                           constant(50*ms, dt)*ampli_current,
                            constant(20 * ms, dt) * 0 * mV])
             Ii = amplifier.acquire('I', 'Vext', V=Vc)
             I.append(Ii[0])
             V.append(Ii[1])
-            
-            I_peaks.append(min(I[-1][int(200.15 * ms / dt):int(219 * ms / dt)]))
-            Vc_peaks.append(Vc[int(210*ms/dt)])
+#            
+#            I_peaks.append(min(I[-1][int(200.5 * ms / dt):int(249 * ms / dt)]))
+#            Vc_peaks.append(Vc[int(220*ms/dt)])
             
             # Plotting
             t = dt*arange(len(Vc))
@@ -84,17 +84,17 @@ def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
             tight_layout()
                 
             # finding the peak
-            i_max = max(abs(Ii[0][int(200.15 * ms / dt):int(219 * ms / dt)]))
+            i_max = max(abs(Ii[0][int(200.5 * ms / dt):int(249 * ms / dt)]))
             
             # finding the threshold
             if n_it > 15:
                 print 'too much iterations'
                 break
-            if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
+            if i_max >= 2.*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
                 # finds the peak axonal current
                 print ' stop '
                 break
-            if i_max <= 0.15*nA:
+            if i_max <= 2.*nA:
                 ampli_min = ampli_current
                 spike = False
             else:
@@ -137,7 +137,7 @@ def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
             print n_it, ampli_current/mV
             
             Vc_th = sequence([constant(200*ms, dt)*V0, #0*mV,
-                            constant(20*ms, dt)*ampli_current,
+                            constant(50*ms, dt)*ampli_current,
                             constant(20 * ms, dt) * 0 * mV])
     
             Ii = amplifier.acquire('I', 'Vext', V=Vc_th)
@@ -160,10 +160,10 @@ def threshold_measurement_ASA_experiment(do_experiment, V0 = 0.*mV):
             tight_layout()
             
             # finding the peak
-            i_max = max(abs(Ii[0][int(200.15 * ms / dt):int(219 * ms / dt)]))
+            i_max = max(abs(Ii[0][int(200.5 * ms / dt):int(249 * ms / dt)]))
             print 'peak current:', i_max/ nA, 'nA'
             
-            if i_max <= 0.15*nA:
+            if i_max <= 2.*nA:
                 spike = 0
             else: 
                 spike = 1
