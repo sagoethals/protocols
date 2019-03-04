@@ -43,8 +43,6 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         os.mkdir(path+'/Steps')
         I = []
         V = []
-        I_peaks = []
-        Vc_peaks = []
             
         ampli_min = 0.*mV
         ampli_current = 30.*mV
@@ -57,16 +55,13 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
             sleep(1)
             print n_it, ampli_current/mV
             
-            # Command and acquisition
+            # Voltage command and acquisition
             Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
                            constant(20*ms, dt)*ampli_current,
                            constant(20 * ms, dt) * 0 * mV])
             Ii = amplifier.acquire('I', 'Vext', V=Vc)
             I.append(Ii[0])
             V.append(Ii[1])
-            
-            #I_peaks.append(min(I[-1][int(200.15 * ms / dt):int(219 * ms / dt)]))
-            #Vc_peaks.append(Vc[int(210*ms/dt)])
             
             # Plotting
             t = dt*arange(len(Vc))
@@ -84,9 +79,9 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
             tight_layout()
                 
             # Measuring the peak axonal current
-            i_max = max(abs(Ii[0][int(200.2 * ms / dt):int(219 * ms / dt)]))
+            i_max = max(abs(Ii[0][int(200.25 * ms / dt):int(219 * ms / dt)]))
             
-            if n_it > 15:
+            if n_it > 11:
                 print 'too much iterations'
                 break
             if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
@@ -117,10 +112,6 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         # Fine measure of the threshold with the staircase methode
         figure('Fine threshold measurement V0=%s' %v0_label)
 
-#        # Make a data folder
-#        if not os.path.exists('data'):
-#            os.mkdir('data')
-
         # Experiment
         os.mkdir(path+'/small_Steps')
         I = []
@@ -131,7 +122,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         ampli_current = v_threshold
         spike = 0
 
-        for n_it in range(1, 11):
+        for n_it in range(1, 21):
             sleep(1) 
             print n_it, ampli_current/mV
             
@@ -160,7 +151,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
             tight_layout()
             
             # Measuring the peak axonal current
-            i_max = max(abs(Ii[0][int(200.2 * ms / dt):int(219 * ms / dt)]))
+            i_max = max(abs(Ii[0][int(200.25 * ms / dt):int(219 * ms / dt)]))
             print 'peak current:', i_max/ nA, 'nA'
             
             if i_max <= 0.15*nA:
