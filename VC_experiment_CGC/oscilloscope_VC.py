@@ -1,11 +1,11 @@
 '''
 An oscilloscope showing the current response to a pulse
 '''
-from clamper import *
+from clampy import *
 from pylab import *
-from clamper.signals import *
+from clampy.signals import *
 #from init_rig import *
-from clamper.setup.init_multiclamp import *
+from clampy.setup.init_multiclamp import *
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button, CheckButtons, RadioButtons, TextBox

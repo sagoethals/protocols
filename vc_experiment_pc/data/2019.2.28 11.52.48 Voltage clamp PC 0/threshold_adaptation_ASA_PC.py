@@ -11,13 +11,13 @@ sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
 #sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
 from pylab import *
-from clampy.data_management import *
-from clampy.signals import *
+from clamper.data_management import *
+from clamper.signals import *
 import os
 import shutil
 from time import sleep
 
-from init_multiclamp import *
+from init_rig_multiclamp import *
 
 ion()
 

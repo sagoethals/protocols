@@ -3,8 +3,8 @@ Initializes data acquisition on the rig.
 This is specific for the Multiclamp 700B.
 '''
 
-from clamper import *
-from clamper.setup.units import *
+from clampy import *
+from clampy.setup.units import *
 
 board = NI()
 

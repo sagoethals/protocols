@@ -9,17 +9,17 @@ Test pulse to measure the series resistance and cell's properties.
 # sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 # sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+from clampy import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+from clampy.brianmodels import *
+from clampy.data_management import *
+from clampy.signals import *
 import os
 import shutil
 from time import sleep
 
 #from init_model import *
-from init_rig_multiclamp import *
+from init_multiclamp import *
 
 do_experiment = not os.path.exists('Pulses')
 

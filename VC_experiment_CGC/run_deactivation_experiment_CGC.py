@@ -11,11 +11,11 @@ An axonal spike is elicited by a short prepulse (0.1 ms) at -30 mV and then the 
 # sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 # sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+from clampy import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+#from clampy.brianmodels import *
+from clampy.data_management import *
+from clampy.signals import *
 import os
 import shutil
 from time import sleep
@@ -40,7 +40,7 @@ if do_experiment:
     os.mkdir(path)
     
     # Saving current script
-    shutil.copy('deactivation_experiment.py', path)
+    shutil.copy('run_deactivation_experiment_CGC.py', path)
 
     # Experiment
     os.mkdir(path+'/Steps')

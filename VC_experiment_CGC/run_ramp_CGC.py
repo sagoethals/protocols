@@ -11,11 +11,11 @@ The command voltage ranges from -80 mV to 20 mV at 0.1 mV/ms.
 # sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 # sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+from clampy import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+#from clampy.brianmodels import *
+from clampy.data_management import *
+from clampy.signals import *
 import os
 import shutil
 from time import sleep
@@ -37,7 +37,7 @@ if do_experiment:
     os.mkdir(path)
     
     # Saving current script
-    shutil.copy('vc_ramp.py', path)
+    shutil.copy('run_ramp_CGC.py', path)
 
     # Experiment
     os.mkdir(path+'/Ramp')

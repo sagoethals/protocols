@@ -5,14 +5,13 @@ Gross measure of the threshold: dichotomy method.
 Fine measure of the threshold: staircase method.
 """
 
-
 import sys
 sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
 #sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
 from pylab import *
-from clamper.data_management import *
-from clamper.signals import *
+from clampy.data_management import *
+from clampy.signals import *
 import os
 import shutil
 from time import sleep
@@ -37,7 +36,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         os.mkdir(path)
         
         # Saving current script
-        shutil.copy('threshold_adaptation_dichotoùy_staircase.py', path)
+        shutil.copy('threshold_adaptation_dichotomy_staircase_method_CGC.py', path)
     
         # Experiment
         os.mkdir(path+'/Steps')
@@ -122,7 +121,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         ampli_current = v_threshold
         spike = 0
 
-        for n_it in range(1, 21):
+        for n_it in range(1, 16):
             sleep(1) 
             print n_it, ampli_current/mV
             
@@ -152,7 +151,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
             
             # Measuring the peak axonal current
             i_max = max(abs(Ii[0][int(200.25 * ms / dt):int(219 * ms / dt)]))
-            print 'peak current:', i_max/ nA, 'nA'
+            #print 'peak current:', i_max/ nA, 'nA'
             
             if i_max <= 0.15*nA:
                 spike = 0

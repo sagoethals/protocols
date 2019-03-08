@@ -11,11 +11,11 @@ The voltage is clamped at resting holding potential during 20 ms, then 10 mV bel
 # sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 # sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+from clampy import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+from clampy.brianmodels import *
+from clampy.data_management import *
+from clampy.signals import *
 import os
 import shutil
 from time import sleep
@@ -40,7 +40,7 @@ if do_experiment:
     os.mkdir(path)
     
     # Saving current script
-    shutil.copy('test_pulse.py', path)
+    shutil.copy('run_test_pulse_CGC.py', path)
 
     # Experiment
     os.mkdir(path+'/Pulses')
@@ -64,7 +64,6 @@ if do_experiment:
         plot(t/ms, array(I[rec]) / nA)
         xlabel('Time (ms)')
         ylabel('Current (nA)')
-        #title('Response to voltage pulses')
         
         subplot(212)
         plot(t/ms, array(V[rec]) / mV)
@@ -86,7 +85,7 @@ if do_experiment:
               path+'/test_pulse.info')
 
 else: # Loading the data after the experiment
-    from clamper.setup.units import *
+    from clampy.setup.units import *
     path = '.'
     I = loadtxt(path+'/Pulses/I.txt')*nA
     V = loadtxt(path + '/Pulses/V.txt')*mV
