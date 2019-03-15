@@ -38,7 +38,7 @@ if do_experiment:
     os.mkdir(path)
     
     # Saving current script
-    shutil.copy('test_pulse.py', path)
+    shutil.copy('run_test_pulse_PC.py', path)
 
     # Experiment
     os.mkdir(path+'/Pulses')

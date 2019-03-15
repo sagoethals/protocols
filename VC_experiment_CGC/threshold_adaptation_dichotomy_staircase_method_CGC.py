@@ -121,7 +121,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         ampli_current = v_threshold
         spike = 0
 
-        for n_it in range(1, 16):
+        for n_it in range(1, 21):
             sleep(1) 
             print n_it, ampli_current/mV
             

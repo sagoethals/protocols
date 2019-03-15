@@ -37,7 +37,7 @@ def threshold_measurement_experiment_PC(do_experiment, V0 = 0.*mV):
         os.mkdir(path)
         
         # Saving current script
-        shutil.copy('threshold_adaptation_ASA_PC.py', path)
+        shutil.copy('threshold_adaptation_staircase_method_PC.py', path)
     
         # Experiment
         os.mkdir(path+'/Steps')
@@ -132,7 +132,7 @@ def threshold_measurement_experiment_PC(do_experiment, V0 = 0.*mV):
         ampli_current = v_threshold
         spike = 0
 
-        for n_it in range(1, 11):
+        for n_it in range(1, 21):
             sleep(1) 
             print n_it, ampli_current/mV
             
