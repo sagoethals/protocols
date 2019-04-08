@@ -6,22 +6,28 @@ Fine measure of the threshold: staircase method.
 """
 
 import sys
-sys.path.append("/home/sarah/Documents/repositories/clamper/clamper")
+sys.path.append("/home/sarah/Documents/repositories/clampy/clampy/")
 #sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
+from brian2 import *
 from pylab import *
-from clampy.data_management import *
-from clampy.signals import *
+from data_management import *
+from signals import *
 import os
 import shutil
 from time import sleep
 
-from init_multiclamp import *
+#from init_multiclamp import *
+
+from init_model import *
 
 ion()
 
-def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
-
+def threshold_measurement_dichotomy_staircase(do_experiment, Vh = 0.*mV, V0 = 0.*mV, i_threshold = 0.15*nA):
+    '''
+    Vh is 0 mV for true recorsings in CGC (set on the Multiclamp commander).
+    i_threshold is 0.15 nA for CGC, larger for neuron model.
+    '''
     # Measure of the gross threshold with dichotomy method
     print 'V0:', V0
     v0_label = V0/mV
@@ -35,8 +41,8 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
         path = 'data/'+date_time()+' Voltage clamp %i' %v0_label
         os.mkdir(path)
         
-        # Saving current script
-        shutil.copy('threshold_adaptation_dichotomy_staircase_method_CGC.py', path)
+        ## Saving current script
+        #shutil.copy('threshold_adaptation_dichotomy_staircase_method_CGC.py', path)
     
         # Experiment
         os.mkdir(path+'/Steps')
@@ -52,13 +58,14 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
                                       
         while True:
             sleep(1)
-            print n_it, ampli_current/mV
+            print n_it, (Vh + ampli_current)/mV
             
             # Voltage command and acquisition
-            Vc = sequence([constant(200*ms, dt)*V0, #0*mV,
-                           constant(20*ms, dt)*ampli_current,
-                           constant(20 * ms, dt) * 0 * mV])
-            Ii = amplifier.acquire('I', 'Vext', V=Vc)
+            Vc = sequence([constant(200*ms, dt)*(Vh + V0), #0*mV,
+                           constant(20*ms, dt)*(Vh+ampli_current),
+                           constant(20 * ms, dt) * Vh])
+            #Ii = amplifier.acquire('I', 'Vext', V=Vc)
+            Ii = amplifier.acquire('I', 'Vext', Vc=Vc)
             I.append(Ii[0])
             V.append(Ii[1])
             
@@ -83,10 +90,10 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
             if n_it > 11:
                 print 'too much iterations'
                 break
-            if i_max >= 0.15*nA and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
+            if i_max >= i_threshold and abs(ampli_current - ampli_min) <= 0.5*mV and spike is False:
                 print ' stop '
                 break
-            if i_max <= 0.15*nA:
+            if i_max <= i_threshold:
                 ampli_min = ampli_current
                 spike = False
             else:
@@ -123,14 +130,14 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
 
         for n_it in range(1, 21):
             sleep(1) 
-            print n_it, ampli_current/mV
+            print n_it, (Vh+ampli_current)/mV
             
             # Command and acquisition
-            Vc_th = sequence([constant(200*ms, dt)*V0, #0*mV,
-                            constant(20*ms, dt)*ampli_current,
-                            constant(20 * ms, dt) * 0 * mV])
+            Vc_th = sequence([constant(200*ms, dt)*(Vh + V0), #0*mV,
+                            constant(20*ms, dt)*(Vh + ampli_current),
+                            constant(20 * ms, dt) * Vh])
     
-            Ii = amplifier.acquire('I', 'Vext', V=Vc_th)
+            Ii = amplifier.acquire('I', 'Vext', Vc=Vc_th)
             I.append(Ii[0])
             V.append(Ii[1])
             
@@ -153,7 +160,7 @@ def threshold_measurement_dichotomy_staircase(do_experiment, V0 = 0.*mV):
             i_max = max(abs(Ii[0][int(200.25 * ms / dt):int(219 * ms / dt)]))
             #print 'peak current:', i_max/ nA, 'nA'
             
-            if i_max <= 0.15*nA:
+            if i_max <= i_threshold:
                 spike = 0
             else: 
                 spike = 1
