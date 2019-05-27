@@ -4,3 +4,5 @@ from threshold_adaptation_regular_regular_method_CGC import *
 from threshold_adaptation_dichotomy_regular_method_CGC import *
 from threshold_adaptation_regular_dichotomy_method_CGC import *
 from threshold_adaptation_dichotomy_staircase_method_CGC import *
+from threshold_adaptation_dichotomy_staircase_method_RGC import *
+from threshold_adaptation_dichotomy_staircase_method_model import *

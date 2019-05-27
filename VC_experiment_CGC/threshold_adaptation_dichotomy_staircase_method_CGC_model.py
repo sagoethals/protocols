@@ -1,3 +1,11 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 29 17:17:47 2019
+
+@author: sarah
+"""
+
 
 
 """
@@ -58,8 +66,8 @@ def threshold_measurement_dichotomy_staircase(do_experiment, amplifier, model=Fa
         Vcom = []
             
         ampli_min = 0.*mV
-        ampli_current = 30.*mV
-        ampli_max = 60.*mV
+        ampli_current = 50.*mV
+        ampli_max = 100.*mV
         spike = False
         
         n_it = 0
@@ -72,20 +80,13 @@ def threshold_measurement_dichotomy_staircase(do_experiment, amplifier, model=Fa
             Vc = sequence([constant(200*ms, dt)*(Vh + V0), #0*mV,
                            constant(20*ms, dt)*(Vh+ampli_current),
                            constant(20 * ms, dt) * Vh])
-            #Ii = amplifier.acquire('I', 'Vext', V=Vc)
-            if model:
-                Ii = amplifier.acquire('I', 'Vext', 'Im',  'INa', 'IK', Vc=Vc)
-                I.append(Ii[0])
-                V.append(Ii[1])
-                Vcom.append(Vc)
-                Im.append(Ii[2])
-                INa.append(Ii[3])
-                IK.append(Ii[4])
-            else:   
-                Ii = amplifier.acquire('I', 'Vext', Vc=Vc)
-                I.append(Ii[0])
-                V.append(Ii[1])
-                Vcom.append(Vc)
+            Ii = amplifier.acquire('I', 'Vext', 'Im',  'INa', 'IK', Vc=Vc)
+            I.append(Ii[0])
+            V.append(Ii[1])
+            Vcom.append(Vc)
+            Im.append(Ii[2])
+            INa.append(Ii[3])
+            IK.append(Ii[4])
             
             # Plotting
             t = dt*arange(len(Vc))
@@ -128,10 +129,9 @@ def threshold_measurement_dichotomy_staircase(do_experiment, amplifier, model=Fa
         savetxt(path+'/Steps/I.txt', array(I)/nA)
         savetxt(path+'/Steps/V.txt', array(V)/mV)
         savetxt(path+'/Steps/Vc.txt', array(Vcom)/mV)
-        if model:
-            savetxt(path+'/Steps/Im.txt', array(Im)/nA)
-            savetxt(path+'/Steps/INa.txt', array(INa)/nA)
-            savetxt(path+'/Steps/IK.txt', array(IK)/nA)
+        savetxt(path+'/Steps/Im.txt', array(Im)/nA)
+        savetxt(path+'/Steps/INa.txt', array(INa)/nA)
+        savetxt(path+'/Steps/IK.txt', array(IK)/nA)
             
 
         # Gross threshold
@@ -163,21 +163,15 @@ def threshold_measurement_dichotomy_staircase(do_experiment, amplifier, model=Fa
             Vc_th = sequence([constant(200*ms, dt)*(Vh + V0), #0*mV,
                             constant(20*ms, dt)*(Vh + ampli_current),
                             constant(20 * ms, dt) * Vh])
-            
-            if model:
-                Ii = amplifier.acquire('I', 'Vext', 'Im', 'INa', 'IK', Vc=Vc_th)
-                I.append(Ii[0])
-                V.append(Ii[1])
-                Im.append(Ii[2])
-                Vcom.append(Vc_th)
-                INa.append(Ii[3])
-                IK.append(Ii[4])
-            else:   
-                Ii = amplifier.acquire('I', 'Vext', Vc=Vc_th)
-                I.append(Ii[0])
-                V.append(Ii[1])
-                Vcom.append(Vc_th)
-    
+
+            Ii = amplifier.acquire('I', 'Vext', 'Im', 'INa', 'IK', Vc=Vc_th)
+            I.append(Ii[0])
+            V.append(Ii[1])
+            Im.append(Ii[2])
+            Vcom.append(Vc_th)
+            INa.append(Ii[3])
+            IK.append(Ii[4])
+
             # Plotting
             t = dt*arange(len(Vc))
             
