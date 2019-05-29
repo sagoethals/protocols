@@ -25,4 +25,4 @@ for V0 in V0s:
     #threshold_measurement_regular_regular(do_experiment, V0)
     #threshold_measurement_dichotomy_regular(do_experiment, V0)
     #threshold_measurement_regular_dichotomy(do_experiment, V0)
-    threshold_measurement_dichotomy_staircase(do_experiment, V0)
+    threshold_adaptation_dichotomy_staircase_method_CGC(do_experiment, amplifier, model=False, V0=V0)

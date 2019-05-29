@@ -8,11 +8,11 @@ Fine measure of the threshold: regular method with small steps.
 # sys.path.append("/home/sarah/Documents/repositories/clamper/clamper/")
 # sys.path.append("/home/sarah/Documents/repositories/protocols/")
 
-from clamper import *
+#from clamper import *
 from pylab import *
-from clamper.brianmodels import *
-from clamper.data_management import *
-from clamper.signals import *
+#from clamper.brianmodels import *
+#from clamper.data_management import *
+#from clamper.signals import *
 import os
 import shutil
 from time import sleep

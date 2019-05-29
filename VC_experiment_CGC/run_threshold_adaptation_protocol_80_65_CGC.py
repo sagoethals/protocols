@@ -12,6 +12,8 @@ Different methods can be used to measure the threshold:
 
 """
 
+import os
+from brian2 import *
 from VC_experiment_CGC import *
 from init_multiclamp import *
 
@@ -22,7 +24,4 @@ n_exp = 4
 V0s = linspace(0., 15., n_exp) * mV
 
 for V0 in V0s:
-    #threshold_measurement_regular_regular(do_experiment, V0)
-    #threshold_measurement_dichotomy_regular(do_experiment, V0)
-    #threshold_measurement_regular_dichotomy(do_experiment, V0)
-    threshold_measurement_dichotomy_staircase(do_experiment, V0)
+    threshold_adaptation_dichotomy_staircase_method_CGC(do_experiment, amplifier, model=False, V0=V0)
